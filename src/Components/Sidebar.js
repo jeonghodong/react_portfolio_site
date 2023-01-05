@@ -1,33 +1,33 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import PropTypes from "prop-types";
+import ListData from "../Data/ListData";
 
 const Wrap = styled.div`
-  background-color: gray;
-  height: 100%;
+  background-color: #9e9e9e;
+  display: flex;
   position: fixed;
-  width: 15%;
+  width: 100%;
 `;
 
-function Sidebar({ name, to, onClick }) {
+const onClick = () => {
+  window.scrollTo(0, 0);
+};
+
+function Sidebar() {
   return (
     <Wrap>
       <h2>PortFolio</h2>
       <ul>
-        <li key={name}>
-          <Link onClick={onClick} to={to}>
-            {name}
-          </Link>
-        </li>
+        {ListData.map((v) => (
+          <li key={v.name}>
+            <Link onClick={onClick} to={v.to}>
+              {v.name}
+            </Link>
+          </li>
+        ))}
       </ul>
     </Wrap>
   );
 }
-
-Sidebar.propTypes = {
-  name: PropTypes.string.isRequired,
-  to: PropTypes.string.isRequired,
-  onClick: PropTypes.func.isRequired,
-};
 
 export default Sidebar;
