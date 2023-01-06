@@ -1,11 +1,4 @@
-import { useEffect } from "react";
-import styled, { keyframes } from "styled-components";
-
-const leftFade = keyframes`
-  to {
-    transform: rotate(360deg);
-  }
-`;
+import styled from "styled-components";
 
 const Wrap = styled.div`
   background-color: rgb(214, 214, 214);
@@ -24,14 +17,6 @@ const Left = styled.div`
   border-radius: 0 10vw 0 0;
   box-shadow: 21px 25px 18px -2px rgba(0, 0, 0, 0.44);
   z-index: 1;
-  //
-  position: fixed;
-
-  animation: ${leftFade} 1s linear infinite;
-  animation-play-state: paused;
-  animation-delay: calc(var(--scroll) * -1s);
-  animation-iteration-count: 1;
-  animation-fill-mode: both;
 `;
 const TitleBox = styled.h2`
   font-size: 1vw;
@@ -74,25 +59,14 @@ const About = styled.h2`
   font-size: 2vw;
   font-weight: bold;
 `;
+
 function Intro() {
-  useEffect(() => {
-    window.addEventListener(
-      "scroll",
-      () => {
-        document.body.style.setProperty(
-          "--scroll",
-          window.pageYOffset / (document.body.offsetHeight - window.innerHeight)
-        );
-      },
-      false
-    );
-  }, []);
   return (
     <Wrap>
       <Left>
         <TitleBox>
           <Circle> </Circle>
-          <Cover>Loremseqffsafsaffsafsa</Cover>
+          <Cover>상세 내 설명</Cover>
           <Name>jeonghdong</Name>
           <Line> </Line>
           <Account>
