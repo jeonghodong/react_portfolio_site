@@ -10,7 +10,8 @@ const Wrap = styled.div`
   align-items: center;
   position: fixed;
   width: 100%;
-  padding: 0 19vw 0 19vw;
+  padding: 0 5vw 0 5vw;
+  z-index: 2;
 `;
 
 const Logo = styled.h1`

@@ -6,6 +6,7 @@ const Wrap = styled.div`
   background-color: black;
   height: 100vh;
   color: white;
+  z-index: 2;
 `;
 
 const TitleBox = styled.div`
@@ -15,23 +16,19 @@ const TitleBox = styled.div`
   transform: translate(-50%, -50%);
 `;
 
-const Title1 = styled.span`
+const Title = styled.span`
   display: block;
-  font-size: 1.5vw;
-`;
-const Title2 = styled.span`
-  display: block;
-  padding-top: 1rem;
-  font-size: 1.5vw;
+  font-size: 1.8vw;
+  font-weight: bold;
 `;
 
 function About() {
   return (
     <Wrap>
       <TitleBox>
-        <Title1>ipsum dolor sit, amet consectetur</Title1>
+        <Title>ipsum dolor sit, amet consectetur</Title>
         <br />
-        <Title2>adipisicing elit. Debitis</Title2>
+        <Title>정호동입니다.</Title>
       </TitleBox>
       <UpDownButton />
     </Wrap>

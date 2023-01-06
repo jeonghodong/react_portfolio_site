@@ -1,23 +1,43 @@
-import styled from "styled-components";
+import { useEffect } from "react";
+import styled, { keyframes } from "styled-components";
+
+const leftFade = keyframes`
+  to {
+    transform: rotate(360deg);
+  }
+`;
 
 const Wrap = styled.div`
-  background-color: white;
+  background-color: rgb(214, 214, 214);
   height: 100vh;
   width: 100%;
   margin: 0 auto;
   display: flex;
 `;
+
 // left
 const Left = styled.div`
-  width: 30%;
-  padding-top: 10rem;
-  border-radius: 0 15vw 0 0;
-  box-shadow: 23px 30px 16px -3px rgba(0, 0, 0, 0.44);
-
+  width: 25%;
+  margin: 5vw 5vw 0 0;
+  background-color: rgb(255, 255, 255);
+  padding-top: 5rem;
+  border-radius: 0 10vw 0 0;
+  box-shadow: 21px 25px 18px -2px rgba(0, 0, 0, 0.44);
   z-index: 1;
+  //
+  position: fixed;
+
+  animation: ${leftFade} 1s linear infinite;
+  animation-play-state: paused;
+  animation-delay: calc(var(--scroll) * -1s);
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
 `;
 const TitleBox = styled.h2`
   font-size: 1vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 const Cover = styled.p`
   padding: 20px 0 10px 0;
@@ -26,10 +46,11 @@ const Name = styled.p`
   font-size: 1.5vw;
   font-weight: bold;
 `;
-const Account = styled.p`
-  background-color: gray;
+const Account = styled.span`
   text-align: center;
-  font-width: 100px;
+  word-break: break-all;
+  width: 60%;
+  font-weight: 300;
 `;
 const Circle = styled.div`
   background-color: gray;
@@ -45,25 +66,43 @@ const Line = styled.div`
 `;
 // right
 const Right = styled.div`
+  background-color: rgb(214, 214, 214);
   width: 70%;
-  background-color: lightgray;
   padding-top: 10rem;
 `;
 const About = styled.h2`
   font-size: 2vw;
   font-weight: bold;
-  color: navy;
 `;
 function Intro() {
+  useEffect(() => {
+    window.addEventListener(
+      "scroll",
+      () => {
+        document.body.style.setProperty(
+          "--scroll",
+          window.pageYOffset / (document.body.offsetHeight - window.innerHeight)
+        );
+      },
+      false
+    );
+  }, []);
   return (
     <Wrap>
       <Left>
-        <Circle> </Circle>
         <TitleBox>
+          <Circle> </Circle>
           <Cover>Loremseqffsafsaffsafsa</Cover>
           <Name>jeonghdong</Name>
           <Line> </Line>
-          <Account> </Account>
+          <Account>
+            니즈를 파악하여 주제에 맞는 디자인을 하는 것 어떠한 사용자 편리하고 보기 좋은 디자인을 하는 것
+            <br />
+            <br />
+            단순하고 진부한 디자인이 아닌 개성있 는 기업의 매출을 극대화하는 디자인
+            <br />
+            <br />한 가지 색이 아닌 다양한 색을 가진 디자이너가 되고자 합니다.
+          </Account>
         </TitleBox>
       </Left>
       <Right>

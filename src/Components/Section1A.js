@@ -5,6 +5,7 @@ const Wrap = styled.div`
   position: relative;
   background-color: rgb(209, 209, 209);
   height: 100vh;
+  z-index: 2;
 `;
 
 function Section1A() {
