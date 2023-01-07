@@ -1,4 +1,4 @@
-const ListData = [
+const HeaderData = [
   {
     name: "About",
     to: "/",
@@ -13,4 +13,4 @@ const ListData = [
   },
 ];
 
-export default ListData;
+export default HeaderData;

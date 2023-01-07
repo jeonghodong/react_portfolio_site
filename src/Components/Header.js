@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import ListData from "../Data/ListData";
+import HeaderData from "../Data/HeaderData";
 
 const Wrap = styled.div`
   background-color: black;
@@ -42,7 +42,7 @@ function Header() {
     <Wrap>
       <Logo>PortFolio</Logo>
       <Ul>
-        {ListData.map((v) => (
+        {HeaderData.map((v) => (
           <li key={v.name}>
             <Link onClick={onClick} to={v.to}>
               {v.name}
