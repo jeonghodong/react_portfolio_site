@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import { SkillData, ContactData } from "../Data/IntroData";
+import TitleBox from "./TitleBox";
 
 const Wrap = styled.div`
   background-color: rgb(214, 214, 214);
@@ -7,7 +9,6 @@ const Wrap = styled.div`
   margin: 0 auto;
   display: flex;
 `;
-
 // left
 const Left = styled.div`
   width: 25%;
@@ -18,37 +19,7 @@ const Left = styled.div`
   box-shadow: 21px 25px 18px -2px rgba(0, 0, 0, 0.44);
   z-index: 1;
 `;
-const TitleBox = styled.h2`
-  font-size: 1vw;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`;
-const Cover = styled.p`
-  padding: 20px 0 10px 0;
-`;
-const Name = styled.p`
-  font-size: 1.5vw;
-  font-weight: bold;
-`;
-const Account = styled.span`
-  text-align: center;
-  word-break: break-all;
-  width: 60%;
-  font-weight: 300;
-`;
-const Circle = styled.div`
-  background-color: gray;
-  width: 12vw;
-  height: 12vw;
-  border-radius: 50%;
-`;
-const Line = styled.div`
-  background-color: black;
-  width: 100px;
-  height: 8px;
-  margin: 40px 0 40px 0;
-`;
+
 // right
 const Right = styled.div`
   background-color: rgb(214, 214, 214);
@@ -56,31 +27,65 @@ const Right = styled.div`
   padding-top: 10rem;
 `;
 const About = styled.h2`
+  font-size: 3vw;
+  font-weight: bold;
+  margin-bottom: 5rem;
+`;
+const Skills = styled.h2`
   font-size: 2vw;
   font-weight: bold;
+`;
+const Icon = styled.span`
+  display: inline-block;
+  font-size: 1.2vw;
+  margin: 0.8rem 1.5rem 0 0;
+`;
+const SkillBox = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  & ul {
+    list-style: inside;
+  }
+`;
+const SkillName = styled.h2`
+  font-size: 1vw;
+  font-weight: bold;
+`;
+const ContactBox = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 `;
 
 function Intro() {
   return (
     <Wrap>
       <Left>
-        <TitleBox>
-          <Circle> </Circle>
-          <Cover>상세 내 설명</Cover>
-          <Name>jeonghdong</Name>
-          <Line> </Line>
-          <Account>
-            니즈를 파악하여 주제에 맞는 디자인을 하는 것 어떠한 사용자 편리하고 보기 좋은 디자인을 하는 것
-            <br />
-            <br />
-            단순하고 진부한 디자인이 아닌 개성있 는 기업의 매출을 극대화하는 디자인
-            <br />
-            <br />한 가지 색이 아닌 다양한 색을 가진 디자이너가 되고자 합니다.
-          </Account>
-        </TitleBox>
+        <TitleBox />
       </Left>
       <Right>
         <About>About me</About>
+        <Skills>Skills</Skills>
+        <SkillBox>
+          {SkillData.map((v) => (
+            <div>
+              <SkillName>{v.name}</SkillName>
+              <ul>
+                {v.skills.map((v2) => (
+                  <li key={v2}>{v2}</li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </SkillBox>
+        <Skills>Contact & Channel</Skills>
+        <ContactBox>
+          {ContactData.map((v) => (
+            <div>
+              <Icon>{v.icon}</Icon>
+              <span>{v.value}</span>
+            </div>
+          ))}
+        </ContactBox>
       </Right>
     </Wrap>
   );
