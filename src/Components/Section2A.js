@@ -3,7 +3,7 @@ import UpDownButton from "./UpDownButton";
 
 const Wrap = styled.div`
   position: relative;
-  background-color: #5a58d7;
+  background-color: #00bbc9;
   height: 100vh;
   z-index: 2;
 `;

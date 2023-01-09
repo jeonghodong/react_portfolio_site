@@ -23,19 +23,20 @@ const Left = styled.div`
 const Right = styled.div`
   background-color: rgb(248 248 248);
   width: 70%;
-  padding-top: 130px;
+  padding-top: 200px;
 `;
 const About = styled.h2`
   position: relative;
   font-size: 3vw;
   font-weight: bold;
-  margin-bottom: 5rem;
+  margin-bottom: 9rem;
+  color: gray;
 `;
 const AboutLine = styled.div`
   position: absolute;
   top: 55%;
   transform: translateY(-50%);
-  width: 70%;
+  width: 80%;
   height: 5px;
   background-color: black;
   margin-left: 1rem;
@@ -70,7 +71,7 @@ const ContactBox = styled.div`
 const SkillsUl = styled.ul`
   font-size: 1.3vw;
   font-weight: 300;
-  margin-bottom: 10rem;
+  margin-bottom: 15rem;
 `;
 const SkillsLi = styled.li`
   margin-bottom: 3rem;
@@ -84,9 +85,8 @@ function Intro() {
       </Left>
       <Right>
         <About>
-          About me<AboutLine> </AboutLine>
+          Skills <AboutLine> </AboutLine>
         </About>
-        <H2>Skills</H2>
         <SkillBox>
           {SkillData.map((v) => (
             <div>

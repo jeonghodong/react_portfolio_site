@@ -26,9 +26,9 @@ function About() {
   return (
     <Wrap>
       <TitleBox>
-        <Title>ipsum dolor sit, amet consectetur</Title>
+        <Title>언제나 빛나고 싶은 </Title>
         <br />
-        <Title>정호동입니다.</Title>
+        <Title>디자이너 정호동입니다.</Title>
       </TitleBox>
       <UpDownButton />
     </Wrap>
