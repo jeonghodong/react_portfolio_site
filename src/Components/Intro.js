@@ -3,7 +3,7 @@ import { SkillData, ContactData } from "../Data/IntroData";
 import TitleBox from "./TitleBox";
 
 const Wrap = styled.div`
-  background-color: rgb(248 248 248);
+  background-color: rgb(250 250 250);
   height: 100vh;
   width: 100%;
   margin: 0 auto;
@@ -16,32 +16,34 @@ const Left = styled.div`
   background-color: rgb(255, 255, 255);
   padding-top: 5rem;
   border-radius: 0 10vw 0 0;
-  box-shadow: 21px 25px 18px -2px rgba(0, 0, 0, 0.44);
+  box-shadow: 15px 25px 18px -2px rgba(0, 0, 0, 0.44);
   z-index: 1;
 `;
 // right
 const Right = styled.div`
-  background-color: rgb(248 248 248);
+  background-color: rgb(250 250 250);
   width: 70%;
   padding-top: 200px;
 `;
-const About = styled.h2`
+const Skills = styled.h2`
   position: relative;
-  font-size: 3vw;
+  font-size: 2.5vw;
   font-weight: bold;
-  margin-bottom: 9rem;
-  color: gray;
+  margin-bottom: 5rem;
+  color: #0000c5;
 `;
-const AboutLine = styled.div`
+
+const SkillsLine = styled.div`
   position: absolute;
   top: 55%;
   transform: translateY(-50%);
   width: 80%;
-  height: 5px;
-  background-color: black;
+  height: 2.5px;
+  background-color: gray;
   margin-left: 1rem;
   display: inline-block;
 `;
+
 const Icon = styled.span`
   display: inline-block;
   font-size: 1.2vw;
@@ -50,28 +52,27 @@ const Icon = styled.span`
 const SkillBox = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  padding-top: 3rem;
   & ul {
     list-style: inside;
   }
 `;
-const H2 = styled.h2`
-  font-size: 2vw;
-  font-weight: bold;
-  margin-bottom: 3rem;
-`;
 const SkillName = styled.h2`
   font-size: 1.5vw;
   font-weight: bold;
-  margin-bottom: 2rem;
+  margin-bottom: 5rem;
 `;
 const ContactBox = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  // background: rgb(245 245 245);
+  // padding: 3rem;
+  // border-radius: 2rem;
+  // box-shadow: inset 4px 4px 15px 0px #000000;
 `;
 const SkillsUl = styled.ul`
-  font-size: 1.3vw;
-  font-weight: 300;
-  margin-bottom: 15rem;
+  font-size: 1vw;
+  margin-bottom: 20rem;
 `;
 const SkillsLi = styled.li`
   margin-bottom: 3rem;
@@ -84,9 +85,9 @@ function Intro() {
         <TitleBox />
       </Left>
       <Right>
-        <About>
-          Skills <AboutLine> </AboutLine>
-        </About>
+        <Skills>
+          Skills <SkillsLine> </SkillsLine>
+        </Skills>
         <SkillBox>
           {SkillData.map((v) => (
             <div>
@@ -100,7 +101,6 @@ function Intro() {
           ))}
         </SkillBox>
         <div>
-          <H2>Contact & Channel</H2>
           <ContactBox>
             {ContactData.map((v) => (
               <div>

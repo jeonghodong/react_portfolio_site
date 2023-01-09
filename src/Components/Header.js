@@ -3,7 +3,7 @@ import styled from "styled-components";
 import HeaderData from "../Data/HeaderData";
 
 const Wrap = styled.div`
-  background-color: black;
+  background-color: #0000c5;
   color: white;
   display: flex;
   justify-content: space-between;
