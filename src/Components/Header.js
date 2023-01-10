@@ -3,6 +3,7 @@ import styled from "styled-components";
 import HeaderData from "../Data/HeaderData";
 
 const Wrap = styled.div`
+  font-family: "Poppins", sans-serif;
   background-color: #0000c5;
   color: white;
   display: flex;

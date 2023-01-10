@@ -24,7 +24,9 @@ const Button = styled.span`
 `;
 
 const onClick = () => {
-  window.scrollTo(0, 9999);
+  setTimeout(function () {
+    window.scrollTo(0, 9999);
+  }, 500);
 };
 
 function UpDownButton() {
