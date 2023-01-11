@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { useRef } from "react";
+import { Link } from "react-router-dom";
 import UpDownButton from "./UpDownButton";
 
 const Wrap = styled.div`
@@ -27,7 +28,6 @@ const Title = styled.span`
 `;
 
 function About() {
-  const text = useRef();
   const bg = useRef();
   const onClick = () => {
     bg.current.animate(
@@ -50,12 +50,14 @@ function About() {
   };
   return (
     <Wrap ref={bg}>
-      <TitleBox ref={text}>
+      <TitleBox>
         <Title>언제나 빛나고 싶은 </Title>
         <br />
         <Title>디자이너 정호동입니다.</Title>
       </TitleBox>
-      <UpDownButton onClick={onClick} />
+      <Link to="/About">
+        <UpDownButton onClick={onClick} />
+      </Link>
     </Wrap>
   );
 }

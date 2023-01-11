@@ -1,8 +1,10 @@
 import styled from "styled-components";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Default from "./Routers/Default";
 import MovieSection from "./Routers/MovieSection";
+import MovieAbout from "./Routers/MovieAbout";
 import ChartSection from "./Routers/ChartSection";
+import ChartAbout from "./Routers/ChartAbout";
+import HomeSection from "./Routers/HomeSection";
 import Home from "./Routers/Home";
 
 const Wrap = styled.div`
@@ -15,11 +17,12 @@ function App() {
     <Wrap>
       <Router>
         <Routes>
-          <Route element={<Default />}>
-            <Route path="/" element={<Home />} />
-            <Route path="/Movie" element={<MovieSection />} />
-            <Route path="/Chart" element={<ChartSection />} />
-          </Route>
+          <Route path="/" element={<Home />} />
+          <Route path="/About" element={<HomeSection />} />
+          <Route path="/Movie" element={<MovieSection />} />
+          <Route path="/MovieAbout" element={<MovieAbout />} />
+          <Route path="/Chart" element={<ChartSection />} />
+          <Route path="/ChartAbout" element={<ChartAbout />} />
         </Routes>
       </Router>
     </Wrap>

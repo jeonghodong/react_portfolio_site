@@ -1,13 +1,13 @@
+import Header from "../Components/Header";
 import Section1 from "../Components/Section1";
-import Section1A from "../Components/Section1A";
 
-function ChartSection() {
+function MovieSection() {
   return (
     <div>
-      <Section1A />
+      <Header />
       <Section1 />
     </div>
   );
 }
 
-export default ChartSection;
+export default MovieSection;

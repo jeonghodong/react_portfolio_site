@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import UpDownButton from "./UpDownButton";
 
@@ -23,7 +24,9 @@ function Section1A() {
   return (
     <Wrap>
       <TitleName>REACT MOVIE APP</TitleName>
-      <UpDownButton />
+      <Link to="/Movie">
+        <UpDownButton />
+      </Link>
     </Wrap>
   );
 }
