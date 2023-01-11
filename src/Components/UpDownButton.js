@@ -4,14 +4,18 @@ import PropTypes from "prop-types";
 const upDown = keyframes`
 0%{
   bottom: 1rem;
+  color: white;
 
 }
 50%{
   bottom: 2rem;
-    opacity: 0;
+  color: black;
+
 }
 100%{
   bottom: 1rem;
+    color: white;
+
 }
 `;
 const Button = styled.span`
