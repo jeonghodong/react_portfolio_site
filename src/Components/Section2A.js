@@ -1,5 +1,8 @@
-import { Link } from "react-router-dom";
+import { useEffect, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
+import closeBg from "../Functions/closeBg";
+import openBg from "../Functions/openBg";
 import UpDownButton from "./UpDownButton";
 
 const Wrap = styled.div`
@@ -21,12 +24,22 @@ const TitleName = styled.h1`
 `;
 
 function Section1A() {
+  const navigate = useNavigate();
+  const bg = useRef();
+  useEffect(() => {
+    openBg(bg);
+  }, []);
+
+  const onClick = () => {
+    closeBg(bg);
+    setTimeout(() => {
+      navigate("/Chart");
+    }, 1000);
+  };
   return (
-    <Wrap>
+    <Wrap ref={bg}>
       <TitleName>CHART APP</TitleName>
-      <Link to="/Chart">
-        <UpDownButton />
-      </Link>
+      <UpDownButton onClick={onClick} />
     </Wrap>
   );
 }

@@ -1,7 +1,9 @@
 import styled from "styled-components";
-import { useRef } from "react";
-import { Link } from "react-router-dom";
+import { useEffect, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 import UpDownButton from "./UpDownButton";
+import openBg from "../Functions/openBg";
+import closeBg from "../Functions/closeBg";
 
 const Wrap = styled.div`
   position: absolute;
@@ -28,25 +30,16 @@ const Title = styled.span`
 `;
 
 function About() {
+  const navigate = useNavigate();
   const bg = useRef();
+  useEffect(() => {
+    openBg(bg);
+  }, []);
   const onClick = () => {
-    bg.current.animate(
-      [
-        // keyframes
-        { display: "none" },
-        { transform: "translateY(0px)", opacity: "1" },
-        { transform: "translateY(-30px)" },
-        { transform: "translateY(100px)", opacity: "0" },
-      ],
-      {
-        // timing options
-        duration: 800,
-        fill: "forwards",
-      }
-    );
-    // setTimeout(function () {
-    //   window.scrollTo(0, 9999);
-    // }, 500);
+    closeBg(bg);
+    setTimeout(() => {
+      navigate("/About");
+    }, 1000);
   };
   return (
     <Wrap ref={bg}>
@@ -55,9 +48,7 @@ function About() {
         <br />
         <Title>디자이너 정호동입니다.</Title>
       </TitleBox>
-      <Link to="/About">
-        <UpDownButton onClick={onClick} />
-      </Link>
+      <UpDownButton onClick={onClick} />
     </Wrap>
   );
 }

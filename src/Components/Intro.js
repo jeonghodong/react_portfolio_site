@@ -1,8 +1,9 @@
 import styled from "styled-components";
-
+import { useEffect, useRef } from "react";
 import ContactBox from "./ContactBox";
 import SkillBox from "./SkillBox";
 import TitleBox from "./TitleBox";
+import openBg from "../Functions/openBg";
 
 const Wrap = styled.div`
   background-color: rgb(250 250 250);
@@ -22,8 +23,12 @@ const Right = styled.div`
 `;
 
 function Intro() {
+  const bg = useRef();
+  useEffect(() => {
+    openBg(bg);
+  }, []);
   return (
-    <Wrap>
+    <Wrap ref={bg}>
       <Left>
         <TitleBox />
       </Left>

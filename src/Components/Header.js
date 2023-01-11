@@ -1,6 +1,8 @@
+import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import HeaderData from "../Data/HeaderData";
+import openBg from "../Functions/openBg";
 
 const Wrap = styled.div`
   font-family: "Poppins", sans-serif;
@@ -34,20 +36,18 @@ const Ul = styled.ul`
   }
 `;
 
-const onClick = () => {
-  window.scrollTo(0, 0);
-};
-
 function Header() {
+  const bg = useRef();
+  useEffect(() => {
+    openBg(bg);
+  }, []);
   return (
-    <Wrap>
+    <Wrap ref={bg}>
       <Logo>PortFolio</Logo>
       <Ul>
         {HeaderData.map((v) => (
           <li key={v.name}>
-            <Link onClick={onClick} to={v.to}>
-              {v.name}
-            </Link>
+            <Link to={v.to}>{v.name}</Link>
           </li>
         ))}
       </Ul>

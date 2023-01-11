@@ -1,4 +1,6 @@
+import { useEffect, useRef } from "react";
 import styled from "styled-components";
+import openBg from "../Functions/openBg";
 
 const Wrap = styled.div`
   background-color: white;
@@ -67,8 +69,12 @@ const Link2 = styled.a`
 `;
 
 function Section1() {
+  const bg = useRef();
+  useEffect(() => {
+    openBg(bg);
+  }, []);
   return (
-    <Wrap>
+    <Wrap ref={bg}>
       <Left>
         <Img src="img/img_portfolio1.png" alt="PFimg" />
       </Left>
