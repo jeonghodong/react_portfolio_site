@@ -1,4 +1,5 @@
 import styled, { keyframes } from "styled-components";
+import PropTypes from "prop-types";
 
 const upDown = keyframes`
 0%{
@@ -23,13 +24,7 @@ const Button = styled.span`
   animation: ${upDown} 1.5s ease-in-out infinite;
 `;
 
-const onClick = () => {
-  setTimeout(function () {
-    window.scrollTo(0, 9999);
-  }, 500);
-};
-
-function UpDownButton() {
+function UpDownButton({ onClick }) {
   return (
     <div>
       <Button onClick={onClick}>
@@ -38,5 +33,9 @@ function UpDownButton() {
     </div>
   );
 }
+
+UpDownButton.propTypes = {
+  onClick: PropTypes.func.isRequired,
+};
 
 export default UpDownButton;
