@@ -34,7 +34,7 @@ function Section1A() {
     closeBg(bg);
     setTimeout(() => {
       navigate("/Movie");
-    }, 1000);
+    }, 900);
   };
 
   return (

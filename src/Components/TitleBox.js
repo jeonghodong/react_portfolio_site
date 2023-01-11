@@ -2,17 +2,11 @@ import styled from "styled-components";
 
 const Wrap = styled.div`
   font-family: "Noto Sans KR", sans-serif;
-  font-size: 1vw;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-right: 3rem;
-  background-color: rgb(255, 255, 255);
-  padding-top 3rem;
-  border-radius: 0 10vw 0 0;
-  box-shadow: 15px 25px 18px -2px rgba(0, 0, 0, 0.44);
-  z-index: 1;
-  height: 100%;
+  padding-top 10rem;
+  height: 100vh;
 `;
 const Cover = styled.p`
   padding: 50px 0 20px 0;

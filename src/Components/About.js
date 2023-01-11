@@ -39,7 +39,7 @@ function About() {
     closeBg(bg);
     setTimeout(() => {
       navigate("/About");
-    }, 1000);
+    }, 900);
   };
   return (
     <Wrap ref={bg}>

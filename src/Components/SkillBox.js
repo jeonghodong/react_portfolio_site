@@ -5,6 +5,8 @@ const Wrap = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   padding-bottom: 10rem;
+  height: 100vh;
+  background-color: rgb(250 250 250);
   & ul {
     list-style: inside;
   }

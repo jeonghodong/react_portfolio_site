@@ -34,7 +34,7 @@ function Section1A() {
     closeBg(bg);
     setTimeout(() => {
       navigate("/Chart");
-    }, 1000);
+    }, 900);
   };
   return (
     <Wrap ref={bg}>
