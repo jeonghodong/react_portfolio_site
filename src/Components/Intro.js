@@ -21,7 +21,7 @@ function Intro() {
   const bg = useRef();
   const folio = useRef();
   const skill = useRef();
-  const button = useRef();
+  const buttonBg = useRef();
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -39,6 +39,7 @@ function Intro() {
   const onClick = (ref) => {
     if (ref === "About") {
       closeBg(bg);
+      closeBg(buttonBg);
       setTimeout(() => {
         navigate("/");
       }, 500);
@@ -53,7 +54,7 @@ function Intro() {
 
   return (
     <div>
-      <Header ref={button} onClick={onClick} />
+      <Header ref={buttonBg} onClick={onClick} />
       <Wrap ref={bg}>
         <TitleBox />
         <SkillBox ref={skill} />

@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { forwardRef, useEffect } from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import HeaderData from "../Data/HeaderData";
@@ -44,15 +44,13 @@ const Button = styled.button`
   font-size: 1.2vw;
 `;
 
-function Header({ onClick }) {
-  const bg = useRef();
-
+const Header = forwardRef(({ onClick }, buttonBg) => {
   useEffect(() => {
-    openBg(bg);
+    openBg(buttonBg);
   }, []);
 
   return (
-    <Wrap ref={bg}>
+    <Wrap ref={buttonBg}>
       <Logo>PortFolio</Logo>
       <Ul>
         {HeaderData.map((v) => (
@@ -70,7 +68,7 @@ function Header({ onClick }) {
       </Ul>
     </Wrap>
   );
-}
+});
 
 Header.propTypes = {
   onClick: PropTypes.func.isRequired,
