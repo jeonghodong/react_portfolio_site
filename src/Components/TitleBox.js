@@ -1,3 +1,4 @@
+import { forwardRef } from "react";
 import styled from "styled-components";
 
 const Wrap = styled.div`
@@ -36,18 +37,18 @@ const Circle = styled.div`
   background-color: gray;
   width: 13vw;
   height: 13vw;
-  border-radius: 50%;
+  border-radius: 10%;
 `;
 const ProfilImg = styled.img`
   width: 100%;
   height: 100%;
-  border-radius: 50%;
-  border: 3px solid #0000c5;
+  border-radius: 10%;
+  border: 3px solid #022340;
 `;
 
-function TitleBox() {
+const TitleBox = forwardRef((_, title) => {
   return (
-    <Wrap>
+    <Wrap ref={title}>
       <Circle>
         <ProfilImg src="img/ghost2.jpg" alt="profil_img" />
       </Circle>
@@ -64,6 +65,6 @@ function TitleBox() {
       </Account>
     </Wrap>
   );
-}
+});
 
 export default TitleBox;

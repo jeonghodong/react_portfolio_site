@@ -1,3 +1,4 @@
+import { forwardRef } from "react";
 import styled from "styled-components";
 import { SkillData } from "../Data/IntroData";
 
@@ -34,9 +35,10 @@ const SkillList = styled.div`
   grid-template-columns: 1fr 1fr 1fr;
   justify-items: center;
 `;
-function SkillBox() {
+
+const SkillBox = forwardRef((_, skill) => {
   return (
-    <Wrap>
+    <Wrap ref={skill}>
       <TitleText>Skills</TitleText>
       <SkillList>
         {SkillData.map((v) => (
@@ -52,6 +54,6 @@ function SkillBox() {
       </SkillList>
     </Wrap>
   );
-}
+});
 
 export default SkillBox;

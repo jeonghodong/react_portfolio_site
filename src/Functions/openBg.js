@@ -7,7 +7,7 @@ function openBg(bg) {
     ],
     {
       delay: 0,
-      duration: 1000,
+      duration: 1300,
       easing: "ease",
       iterations: 1,
     }

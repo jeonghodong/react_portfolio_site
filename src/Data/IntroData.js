@@ -14,15 +14,13 @@ const SkillData = [
 ];
 
 const ContactData = [
-  {
-    icon: <i className="fa-solid fa-envelope"> </i>,
-    value: "fire13764@gmail.com",
-  },
+  { id: 1, icon: <i className="fa-solid fa-envelope"> </i>, value: "fire13764@gmail.com" },
   {
     icon: <i className="fa-solid fa-phone"> </i>,
     value: "010-3145-4110",
   },
   {
+    id: 2,
     icon: <i className="fa-solid fa-house"> </i>,
     value: (
       <a href="https://jeonghodong.tistory.com" target="_blank" rel="noreferrer">
@@ -31,6 +29,7 @@ const ContactData = [
     ),
   },
   {
+    id: 3,
     icon: <i className="fa-solid fa-n"> </i>,
     value: (
       <a href="https://www.notion.so/b8063fdda72e43d0b3c240ae82b5dc51" target="_blank" rel="noreferrer">
@@ -39,6 +38,7 @@ const ContactData = [
     ),
   },
   {
+    id: 4,
     icon: <i className="fa-brands fa-github"> </i>,
     value: (
       <a href="https://github.com/jeonghodong" target="_blank" rel="noreferrer">

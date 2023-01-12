@@ -7,7 +7,7 @@ function closeBg(bg) {
     ],
     {
       delay: 0,
-      duration: 1200,
+      duration: 1100,
       easing: "ease",
       iterations: 1,
       fill: "forwards",

@@ -1,12 +1,6 @@
 const PortFolioData = [
-  {
-    name: "Movie",
-    to: "/MovieAbout",
-  },
-  {
-    name: "Chart",
-    to: "/ChartAbout",
-  },
+  { id: 1, name: "Movie", to: "/MovieAbout" },
+  { id: 2, name: "Chart", to: "/ChartAbout" },
 ];
 
 export default PortFolioData;

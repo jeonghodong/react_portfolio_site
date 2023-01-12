@@ -1,10 +1,10 @@
+import { forwardRef } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import PortFolioData from "../Data/PortFolioData";
 
 const Wrap = styled.div`
   height: 100vh;
-
   font-family: "Poppins", sans-serif;
 `;
 
@@ -22,14 +22,14 @@ const FolioUl = styled.ul`
   justify-items: center;
 `;
 
-function PortfolioBox() {
+const PortfolioBox = forwardRef((_, folio) => {
   return (
-    <Wrap>
+    <Wrap id="port" ref={folio}>
       <TitleText>Portfolio</TitleText>
       <FolioUl>
         {PortFolioData.map((v) => (
           <Link to={v.to}>
-            <li>
+            <li key={v.id}>
               <h2>{v.name}</h2>
             </li>
           </Link>
@@ -37,6 +37,6 @@ function PortfolioBox() {
       </FolioUl>
     </Wrap>
   );
-}
+});
 
 export default PortfolioBox;

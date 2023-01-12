@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 import styled from "styled-components";
 import HeaderData from "../Data/HeaderData";
 import openBg from "../Functions/openBg";
@@ -36,23 +36,36 @@ const Ul = styled.ul`
   }
 `;
 
-function Header() {
+function Header({ onClick }) {
   const bg = useRef();
+
   useEffect(() => {
     openBg(bg);
   }, []);
+
   return (
     <Wrap ref={bg}>
       <Logo>PortFolio</Logo>
       <Ul>
         {HeaderData.map((v) => (
-          <li key={v.name}>
-            <Link to={v.to}>{v.name}</Link>
+          <li key={v.id}>
+            <button
+              type="button"
+              onClick={() => {
+                onClick(v.name);
+              }}
+            >
+              {v.name}
+            </button>
           </li>
         ))}
       </Ul>
     </Wrap>
   );
 }
+
+Header.propTypes = {
+  onClick: PropTypes.func.isRequired,
+};
 
 export default Header;

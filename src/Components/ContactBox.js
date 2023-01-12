@@ -15,7 +15,7 @@ function ContactBox() {
   return (
     <Wrap>
       {ContactData.map((v) => (
-        <div>
+        <div key={v.id}>
           <Icon>{v.icon}</Icon>
           <span>{v.value}</span>
         </div>
