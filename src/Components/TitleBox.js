@@ -4,8 +4,8 @@ const Wrap = styled.div`
   font-family: "Noto Sans KR", sans-serif;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  padding-top 10rem;
+  align-items: left;
+  padding-top 7rem;
   height: 100vh;
 `;
 const Cover = styled.p`
@@ -18,9 +18,9 @@ const Name = styled.p`
   font-weight: bold;
 `;
 const Account = styled.span`
-  text-align: center;
+  text-align: left;
   word-break: break-all;
-  width: 60%;
+  width: 100%;
   font-size: 1vw;
   font-weight: 300;
   letter-spacing: 1px;
@@ -42,7 +42,7 @@ const ProfilImg = styled.img`
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  border: 3px solid black;
+  border: 3px solid #0000c5;
 `;
 
 function TitleBox() {

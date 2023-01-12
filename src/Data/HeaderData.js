@@ -4,11 +4,11 @@ const HeaderData = [
     to: "/",
   },
   {
-    name: "Movie",
+    name: "Skills",
     to: "/MovieAbout",
   },
   {
-    name: "Chart",
+    name: "Works",
     to: "/ChartAbout",
   },
 ];
