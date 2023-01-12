@@ -36,6 +36,14 @@ const Ul = styled.ul`
   }
 `;
 
+const Button = styled.button`
+  cursor: pointer;
+  color: white;
+  border: none;
+  background: inherit;
+  font-size: 1.2vw;
+`;
+
 function Header({ onClick }) {
   const bg = useRef();
 
@@ -49,14 +57,14 @@ function Header({ onClick }) {
       <Ul>
         {HeaderData.map((v) => (
           <li key={v.id}>
-            <button
+            <Button
               type="button"
               onClick={() => {
                 onClick(v.name);
               }}
             >
               {v.name}
-            </button>
+            </Button>
           </li>
         ))}
       </Ul>

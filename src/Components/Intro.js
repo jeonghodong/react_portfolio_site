@@ -1,11 +1,13 @@
 import styled from "styled-components";
 import { useEffect, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 import ContactBox from "./ContactBox";
 import SkillBox from "./SkillBox";
 import TitleBox from "./TitleBox";
 import openBg from "../Functions/openBg";
 import PortfolioBox from "./PortfolioBox";
 import Header from "./Header";
+import closeBg from "../Functions/closeBg";
 
 const Wrap = styled.div`
   padding-top: 6rem;
@@ -13,21 +15,14 @@ const Wrap = styled.div`
   margin: 0 auto;
   max-width: 1000px;
   width: 100%;
-
-  // 기능은 동작하지만 scroll bar 안보이게하기.
-  overflow-y: scroll;
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
-  &::-webkit-scrollbar {
-    display: none;
-  }
 `;
 
 function Intro() {
   const bg = useRef();
   const folio = useRef();
   const skill = useRef();
-  const title = useRef();
+  const button = useRef();
+  const navigate = useNavigate();
 
   useEffect(() => {
     openBg(bg);
@@ -43,7 +38,10 @@ function Intro() {
 
   const onClick = (ref) => {
     if (ref === "About") {
-      title.current.scrollIntoView({ behavior: "smooth" });
+      closeBg(bg);
+      setTimeout(() => {
+        navigate("/");
+      }, 500);
     }
     if (ref === "Skills") {
       skill.current.scrollIntoView({ behavior: "smooth" });
@@ -55,9 +53,9 @@ function Intro() {
 
   return (
     <div>
-      <Header onClick={onClick} />
+      <Header ref={button} onClick={onClick} />
       <Wrap ref={bg}>
-        <TitleBox ref={title} />
+        <TitleBox />
         <SkillBox ref={skill} />
         <PortfolioBox ref={folio} />
         <ContactBox />
