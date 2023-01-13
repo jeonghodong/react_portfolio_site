@@ -29,6 +29,7 @@ const BackButton = styled.i`
   &:hover {
     transition: 0.5s;
     font-size: 3.5vw;
+    right: -10px;
     animation: ${rotate2} 0.5s ease;
     animation-fill-mode: forwards;
   }
