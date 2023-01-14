@@ -1,7 +1,6 @@
 import { useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
-import closeBg from "../Functions/closeBg";
 import openBg from "../Functions/openBg";
 import UpDownButton from "./UpDownButton";
 
@@ -31,14 +30,26 @@ function Section1A() {
   }, []);
 
   const onClick = () => {
-    closeBg(bg);
+    bg.current.animate(
+      [
+        { transform: "translateY(0px)", opacity: "1" },
+        { transform: "translateY(-1200px)", opacity: "0" },
+      ],
+      {
+        delay: 0,
+        duration: 1100,
+        easing: "ease",
+        iterations: 1,
+        fill: "forwards",
+      }
+    );
     setTimeout(() => {
       navigate("/Chart");
     }, 900);
   };
   return (
     <Wrap ref={bg}>
-      <TitleName>CHART APP</TitleName>
+      <TitleName>REACT CHART APP</TitleName>
       <UpDownButton onClick={onClick} />
     </Wrap>
   );

@@ -51,7 +51,7 @@ const Header = forwardRef(({ onClick }, buttonBg) => {
 
   return (
     <Wrap ref={buttonBg}>
-      <Logo>PortFolio</Logo>
+      <Logo>HODONG</Logo>
       <Ul>
         {HeaderData.map((v) => (
           <li key={v.id}>

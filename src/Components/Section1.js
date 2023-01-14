@@ -7,7 +7,7 @@ const Wrap = styled.div`
   background-color: white;
   height: 100vh;
   padding-top: 275px;
-  width: 1300px;
+  width: 80%;
   margin: 0 auto;
   display: flex;
 `;

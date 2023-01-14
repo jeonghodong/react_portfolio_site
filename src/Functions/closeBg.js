@@ -3,7 +3,7 @@ function closeBg(bg) {
   bg.current.animate(
     [
       { transform: "translateY(0px)", opacity: "1" },
-      { transform: "translateY(-1200px)", opacity: "0" },
+      { transform: "translateY(-600px)", opacity: "0" },
     ],
     {
       delay: 0,

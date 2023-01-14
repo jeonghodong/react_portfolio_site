@@ -4,11 +4,18 @@ import { ContactData } from "../Data/IntroData";
 const Wrap = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  justify-items: center;
+  background-color: blue;
+  padding: 2rem;
+  color: white;
 `;
 const Icon = styled.span`
   display: inline-block;
-  font-size: 1.2vw;
+  font-size: 1.3vw;
   margin: 0.8rem 1.5rem 0 0;
+`;
+const Text = styled.span`
+  font-size: 1vw;
 `;
 
 function ContactBox() {
@@ -17,7 +24,7 @@ function ContactBox() {
       {ContactData.map((v) => (
         <div key={v.id}>
           <Icon>{v.icon}</Icon>
-          <span>{v.value}</span>
+          <Text>{v.value}</Text>
         </div>
       ))}
     </Wrap>

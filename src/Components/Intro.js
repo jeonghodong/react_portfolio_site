@@ -13,7 +13,6 @@ const Wrap = styled.div`
   padding-top: 6rem;
   height: 100vh;
   margin: 0 auto;
-  max-width: 1000px;
   width: 100%;
 `;
 
@@ -37,17 +36,29 @@ function Intro() {
   }, []);
 
   const onClick = (ref) => {
-    if (ref === "About") {
-      closeBg(bg);
+    if (ref === "ABOUT") {
+      bg.current.animate(
+        [
+          { transform: "translateY(0px)", opacity: "1" },
+          { transform: "translateY(200px)", opacity: "0" },
+        ],
+        {
+          delay: 0,
+          duration: 800,
+          easing: "ease",
+          iterations: 1,
+          fill: "forwards",
+        }
+      );
       closeBg(buttonBg);
       setTimeout(() => {
         navigate("/");
       }, 500);
     }
-    if (ref === "Skills") {
+    if (ref === "SKILLS") {
       skill.current.scrollIntoView({ behavior: "smooth" });
     }
-    if (ref === "Works") {
+    if (ref === "WORKS") {
       folio.current.scrollIntoView({ behavior: "smooth" });
     }
   };

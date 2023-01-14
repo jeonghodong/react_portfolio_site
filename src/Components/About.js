@@ -3,7 +3,6 @@ import { useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import UpDownButton from "./UpDownButton";
 import openBg from "../Functions/openBg";
-import closeBg from "../Functions/closeBg";
 
 const Wrap = styled.div`
   position: absolute;
@@ -36,7 +35,19 @@ function About() {
     openBg(bg);
   }, []);
   const onClick = () => {
-    closeBg(bg);
+    bg.current.animate(
+      [
+        { transform: "translateY(0px)", opacity: "1" },
+        { transform: "translateY(-1200px)", opacity: "0" },
+      ],
+      {
+        delay: 0,
+        duration: 1100,
+        easing: "ease",
+        iterations: 1,
+        fill: "forwards",
+      }
+    );
     setTimeout(() => {
       navigate("/About");
     }, 900);

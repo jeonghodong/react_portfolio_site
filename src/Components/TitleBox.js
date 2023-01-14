@@ -8,6 +8,8 @@ const Wrap = styled.div`
   align-items: left;
   padding-top 7rem;
   height: 100vh;
+  max-width: 1200px;
+  margin: 0 auto;
 `;
 const Cover = styled.p`
   padding: 50px 0 20px 0;
@@ -29,7 +31,7 @@ const Account = styled.span`
 `;
 const Line = styled.div`
   background-color: black;
-  width: 3vw;
+  width: 100%;
   height: 4px;
   margin: 47px 0 47px 0;
 `;
@@ -53,9 +55,13 @@ const TitleBox = forwardRef((_, title) => {
         <ProfilImg src="img/ghost2.jpg" alt="profil_img" />
       </Circle>
       <Cover>항상 빛나는 다이아몬드 같은 디자이너</Cover>
-      <Name>jeonghodong</Name>
+      <Name>정호동</Name>
       <Line> </Line>
       <Account>
+        안녕하세요.
+        <br />
+        <br />
+        <br />
         니즈를 파악하여 주제에 맞는 디자인을 하는 것 어떠한 사용자 편리하고 보기 좋은 디자인을 하는 것
         <br />
         <br />

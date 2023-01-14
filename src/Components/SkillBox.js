@@ -4,15 +4,16 @@ import { SkillData } from "../Data/IntroData";
 
 const Wrap = styled.div`
   height: 100vh;
-
   font-family: "Poppins", sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
 `;
 
 const SkillName = styled.h2`
   font-size: 1.5vw;
   font-weight: bold;
   text-align: center;
-  margin-bottom: 5rem;
+  margin-bottom: 8rem;
 `;
 
 const SkillsUl = styled.ul`
@@ -26,7 +27,7 @@ const TitleText = styled.h2`
   font-size: 2.5vw;
   font-weight: bold;
   color: #0000c5;
-  padding: 5rem 0 5rem 0;
+  padding: 12rem 0 8rem 0;
   text-align: center;
 `;
 
