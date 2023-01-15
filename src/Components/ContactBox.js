@@ -1,26 +1,35 @@
+import { forwardRef } from "react";
 import styled from "styled-components";
 import { ContactData } from "../Data/IntroData";
 
 const Wrap = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
   justify-items: center;
-  background-color: blue;
-  padding: 2rem;
-  color: white;
+  padding: 5rem 5rem;
+  background-color: rgb(240 240 240);
+  font-family: "Poppins", sans-serif;
 `;
 const Icon = styled.span`
   display: inline-block;
   font-size: 1.3vw;
-  margin: 0.8rem 1.5rem 0 0;
+  margin: 1rem 1rem;
 `;
 const Text = styled.span`
   font-size: 1vw;
 `;
+const TitleText = styled.h2`
+  font-size: 2.5vw;
+  font-weight: bold;
+  color: #0000c5;
+  text-align: center;
+  margin-bottom: 5rem;
+`;
 
-function ContactBox() {
+const ContactBox = forwardRef((_, contact) => {
   return (
-    <Wrap>
+    <Wrap ref={contact}>
+      <TitleText>Contact & Channel</TitleText>
       {ContactData.map((v) => (
         <div key={v.id}>
           <Icon>{v.icon}</Icon>
@@ -29,6 +38,6 @@ function ContactBox() {
       ))}
     </Wrap>
   );
-}
+});
 
 export default ContactBox;

@@ -1,7 +1,8 @@
 const HeaderData = [
-  { id: 1, name: "ABOUT", to: "/" },
-  { id: 2, name: "SKILLS", to: "/MovieAbout" },
-  { id: 3, name: "WORKS", to: "/ChartAbout" },
+  { id: 1, name: "ABOUT" },
+  { id: 2, name: "SKILLS" },
+  { id: 3, name: "WORKS" },
+  { id: 4, name: "CONTACT" },
 ];
 
 export default HeaderData;

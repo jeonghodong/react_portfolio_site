@@ -20,6 +20,7 @@ function Intro() {
   const bg = useRef();
   const folio = useRef();
   const skill = useRef();
+  const contact = useRef();
   const buttonBg = useRef();
   const navigate = useNavigate();
 
@@ -61,6 +62,9 @@ function Intro() {
     if (ref === "WORKS") {
       folio.current.scrollIntoView({ behavior: "smooth" });
     }
+    if (ref === "CONTACT") {
+      contact.current.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   return (
@@ -70,7 +74,7 @@ function Intro() {
         <TitleBox />
         <SkillBox ref={skill} />
         <PortfolioBox ref={folio} />
-        <ContactBox />
+        <ContactBox ref={contact} />
       </Wrap>
     </div>
   );

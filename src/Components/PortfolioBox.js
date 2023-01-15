@@ -15,10 +15,34 @@ const TitleText = styled.h2`
   text-align: center;
 `;
 
+const Section = styled.span`
+  background-color: black;
+  width: 50%;
+  height: 600px;
+  border-radius: 10px;
+  display: block;
+`;
+const Section1 = styled(Section)`
+  background-color: blue;
+`;
+const Section2 = styled(Section)`
+  background-color: red;
+`;
+const SectionWrap = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+`;
+
 const PortfolioBox = forwardRef((_, folio) => {
   return (
     <Wrap id="port" ref={folio}>
       <TitleText>Portfolio</TitleText>
+      <SectionWrap>
+        <Section> </Section>
+        <Section1> </Section1>
+        <Section2> </Section2>
+      </SectionWrap>
     </Wrap>
   );
 });
