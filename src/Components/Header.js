@@ -1,20 +1,16 @@
 import { forwardRef, useEffect } from "react";
 import PropTypes from "prop-types";
-import styled from "styled-components";
+import styled, { ThemeProvider } from "styled-components";
 import HeaderData from "../Data/HeaderData";
 import openBg from "../Functions/openBg";
+import theme from "../styles/theme";
 
-const Wrap = styled.div`
-  font-family: "Poppins", sans-serif;
-  background-color: #0000c5;
+const Button = styled.button`
+  cursor: pointer;
   color: white;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: fixed;
-  width: 100%;
-  padding: 0 5vw 0 5vw;
-  z-index: 2;
+  border: none;
+  background: inherit;
+  font-size: 1vw;
 `;
 
 const Logo = styled.h1`
@@ -36,12 +32,23 @@ const Ul = styled.ul`
   }
 `;
 
-const Button = styled.button`
-  cursor: pointer;
+const Wrap = styled.div`
+  @media ${(props) => props.theme.mobile} {
+    flex-direction: column;
+    ${Button} {
+      padding-bottom: 1rem;
+    }
+  }
+  font-family: "Poppins", sans-serif;
+  background-color: #0000c5;
   color: white;
-  border: none;
-  background: inherit;
-  font-size: 1.2vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  padding: 0 5vw 0 5vw;
+  z-index: 2;
 `;
 
 const Header = forwardRef(({ onClick }, buttonBg) => {
@@ -50,23 +57,25 @@ const Header = forwardRef(({ onClick }, buttonBg) => {
   }, []);
 
   return (
-    <Wrap ref={buttonBg}>
-      <Logo>HODONG</Logo>
-      <Ul>
-        {HeaderData.map((v) => (
-          <li key={v.id}>
-            <Button
-              type="button"
-              onClick={() => {
-                onClick(v.name);
-              }}
-            >
-              {v.name}
-            </Button>
-          </li>
-        ))}
-      </Ul>
-    </Wrap>
+    <ThemeProvider theme={theme}>
+      <Wrap ref={buttonBg}>
+        <Logo>HODONG</Logo>
+        <Ul>
+          {HeaderData.map((v) => (
+            <li key={v.id}>
+              <Button
+                type="button"
+                onClick={() => {
+                  onClick(v.name);
+                }}
+              >
+                {v.name}
+              </Button>
+            </li>
+          ))}
+        </Ul>
+      </Wrap>
+    </ThemeProvider>
   );
 });
 

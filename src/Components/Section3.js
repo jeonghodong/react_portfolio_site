@@ -96,7 +96,7 @@ const Wrap = styled.div`
   display: flex;
 `;
 
-function Section2() {
+function Section3() {
   const bg = useRef();
   useEffect(() => {
     openBg(bg);
@@ -110,7 +110,7 @@ function Section2() {
             <Img src="img/img_portfolio2.png" alt="PFimg" />
           </Left>
           <Right>
-            <TitleName>CHART APP</TitleName>
+            <TitleName>Portfolio</TitleName>
             <Acc>
               리액트를 학습하며 제작한 데스크탑 페이지입니다.
               <br />
@@ -120,13 +120,13 @@ function Section2() {
             <Link href="https://jeonghodong.github.io/react_movie_app/" target="_blank" rel="noreferrer">
               Link
             </Link>
-            <Link href="https://github.com/jeonghodong/chartjs" target="_blank" rel="noreferrer">
+            <Link href="https://github.com/jeonghodong/react_portfolio_site" target="_blank" rel="noreferrer">
               GitHub
             </Link>
             <Skills>
               <li>React</li>
               <li>Sass / Scss</li>
-              <li>CSS Module</li>
+              <li>CSS in Js</li>
             </Skills>
           </Right>
         </Wrap>
@@ -135,4 +135,4 @@ function Section2() {
   );
 }
 
-export default Section2;
+export default Section3;

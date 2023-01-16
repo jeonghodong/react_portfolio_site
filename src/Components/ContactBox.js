@@ -6,7 +6,8 @@ const Wrap = styled.div`
   display: grid;
   grid-template-columns: 1fr;
   justify-items: center;
-  padding: 5rem 5rem;
+  padding: 4rem 4rem;
+  margin-top: 5rem;
   background-color: rgb(240 240 240);
   font-family: "Poppins", sans-serif;
 `;
@@ -25,18 +26,31 @@ const TitleText = styled.h2`
   text-align: center;
   margin-bottom: 5rem;
 `;
+const FooterLine = styled.div`
+  background-color: #5353c2;
+  width: 100vw;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size 0.8vw;
+  color: white;
+`;
 
 const ContactBox = forwardRef((_, contact) => {
   return (
-    <Wrap ref={contact}>
-      <TitleText>Contact & Channel</TitleText>
-      {ContactData.map((v) => (
-        <div key={v.id}>
-          <Icon>{v.icon}</Icon>
-          <Text>{v.value}</Text>
-        </div>
-      ))}
-    </Wrap>
+    <>
+      <Wrap ref={contact}>
+        <TitleText>Contact & Channel</TitleText>
+        {ContactData.map((v) => (
+          <div key={v.id}>
+            <Icon>{v.icon}</Icon>
+            <Text>{v.value}</Text>
+          </div>
+        ))}
+      </Wrap>
+      <FooterLine>2023 Copyright Hodong All right reserved.</FooterLine>
+    </>
   );
 });
 

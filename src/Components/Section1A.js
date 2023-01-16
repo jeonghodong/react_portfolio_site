@@ -1,16 +1,9 @@
 import { useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
-import styled from "styled-components";
+import styled, { ThemeProvider } from "styled-components";
 import openBg from "../Functions/openBg";
 import UpDownButton from "./UpDownButton";
-
-const Wrap = styled.div`
-  font-family: "Poppins", sans-serif;
-  position: relative;
-  background-color: #101e26;
-  height: 100vh;
-  z-index: 2;
-`;
+import theme from "../styles/theme";
 
 const TitleName = styled.h1`
   color: white;
@@ -20,6 +13,20 @@ const TitleName = styled.h1`
   position: relative;
   top: 35%;
   margin-right: 10rem;
+`;
+
+const Wrap = styled.div`
+  @media ${(props) => props.theme.tablet} {
+    & ${TitleName} {
+      text-align: center;
+      margin-right: 0;
+    }
+  }
+  font-family: "Poppins", sans-serif;
+  position: relative;
+  background-color: #101e26;
+  height: 100vh;
+  z-index: 2;
 `;
 
 function Section1A() {
@@ -49,10 +56,12 @@ function Section1A() {
   };
 
   return (
-    <Wrap ref={bg}>
-      <TitleName>REACT MOVIE APP</TitleName>
-      <UpDownButton onClick={onClick} />
-    </Wrap>
+    <ThemeProvider theme={theme}>
+      <Wrap ref={bg}>
+        <TitleName>REACT MOVIE APP</TitleName>
+        <UpDownButton onClick={onClick} />
+      </Wrap>
+    </ThemeProvider>
   );
 }
 

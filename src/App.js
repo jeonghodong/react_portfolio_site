@@ -6,6 +6,8 @@ import ChartSection from "./Routers/ChartSection";
 import ChartAbout from "./Routers/ChartAbout";
 import HomeSection from "./Routers/HomeSection";
 import Home from "./Routers/Home";
+import PortfolioSection from "./Routers/PortfolioSection";
+import PortfolioAbout from "./Routers/PortfolioAbout";
 
 const Wrap = styled.div`
   margin: 0 auto;
@@ -31,6 +33,8 @@ function App() {
           <Route path="/MovieAbout" element={<MovieAbout />} />
           <Route path="/Chart" element={<ChartSection />} />
           <Route path="/ChartAbout" element={<ChartAbout />} />
+          <Route path="/Portfolio" element={<PortfolioSection />} />
+          <Route path="/PortfolioAbout" element={<PortfolioAbout />} />
         </Routes>
       </Router>
     </Wrap>

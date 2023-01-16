@@ -24,12 +24,12 @@ const Wrap = styled.div`
   }
   font-family: "Poppins", sans-serif;
   position: relative;
-  background-color: #5a58d7;
+  background-color: #0000c5;
   height: 100vh;
   z-index: 2;
 `;
 
-function Section1A() {
+function Section3A() {
   const navigate = useNavigate();
   const bg = useRef();
   useEffect(() => {
@@ -51,17 +51,17 @@ function Section1A() {
       }
     );
     setTimeout(() => {
-      navigate("/Chart");
+      navigate("/Portfolio");
     }, 900);
   };
   return (
     <ThemeProvider theme={theme}>
       <Wrap ref={bg}>
-        <TitleName>REACT CHART APP</TitleName>
+        <TitleName>Portfolio</TitleName>
         <UpDownButton onClick={onClick} />
       </Wrap>
     </ThemeProvider>
   );
 }
 
-export default Section1A;
+export default Section3A;

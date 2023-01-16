@@ -17,9 +17,8 @@
     "react/jsx-filename-extension": [0],
     "import/extensions": "off",
     "react/react-in-jsx-scope": "off",
-    "prettier/prettier": [
-      ["error", { "endOfLine": "auto" }],
-      ["error", { "singleQuote": false }]
-    ]
+    "no-use-before-define": "off",
+    "prettier/prettier": "off"
+    // "prettier/prettier": ["off", { "endOfLine": "auto", "singleQuote": false }]
   }
 }
