@@ -28,13 +28,16 @@ const TitleText = styled.h2`
 `;
 const FooterLine = styled.div`
   background-color: #5353c2;
-  width: 100vw;
+  width: 99vw;
+  border-radius:1rem;
+  margin:0 auto;
   height: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size 0.8vw;
   color: white;
+  box-shadow:0px 30px 18px -8px rgba(0,0,0,0.44);
 `;
 
 const ContactBox = forwardRef((_, contact) => {

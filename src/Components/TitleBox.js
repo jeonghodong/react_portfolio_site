@@ -74,10 +74,11 @@ const TitleBox = forwardRef((_, title) => {
         <Circle>
           <ProfilImg src="img/ghost2.jpg" alt="profil_img" />
         </Circle>
-        <Cover>항상 빛나는 다이아몬드 같은 디자이너</Cover>
+        <Cover>날이면 날마다 성장해나가는 개발자</Cover>
         <Name>정호동</Name>
         <Line> </Line>
         <Account>
+          {/* 작업예정 */}
           안녕하세요.
           <br />
           <br />

@@ -55,9 +55,9 @@ function About() {
   return (
     <Wrap ref={bg}>
       <TitleBox>
-        <Title>언제나 빛나고 싶은 </Title>
+        <Title>안녕하세요. 프론트엔드 개발자</Title>
         <br />
-        <Title>디자이너 정호동입니다.</Title>
+        <Title>정호동입니다.</Title>
       </TitleBox>
       <UpDownButton onClick={onClick} />
     </Wrap>
