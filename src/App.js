@@ -4,10 +4,10 @@ import MovieSection from "./Routers/MovieSection";
 import MovieAbout from "./Routers/MovieAbout";
 import ChartSection from "./Routers/ChartSection";
 import ChartAbout from "./Routers/ChartAbout";
-import HomeSection from "./Routers/HomeSection";
 import Home from "./Routers/Home";
 import PortfolioSection from "./Routers/PortfolioSection";
 import PortfolioAbout from "./Routers/PortfolioAbout";
+import Intro from "./Routers/Intro";
 
 const Wrap = styled.div`
   margin: 0 auto;
@@ -28,7 +28,7 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/About" element={<HomeSection />} />
+          <Route path="/About" element={<Intro />} />
           <Route path="/Movie" element={<MovieSection />} />
           <Route path="/MovieAbout" element={<MovieAbout />} />
           <Route path="/Chart" element={<ChartSection />} />

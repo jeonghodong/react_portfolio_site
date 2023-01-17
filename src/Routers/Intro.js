@@ -1,13 +1,14 @@
 import styled from "styled-components";
 import { useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
-import ContactBox from "./ContactBox";
-import SkillBox from "./SkillBox";
-import TitleBox from "./TitleBox";
+import ContactBox from "../Components/ContactBox";
+import SkillBox from "../Components/SkillBox";
+import TitleBox from "../Components/TitleBox";
 import openBg from "../Functions/openBg";
-import PortfolioBox from "./PortfolioBox";
-import Header from "./Header";
+import PortfolioBox from "../Components/PortfolioBox";
+import Header from "../Components/Header";
 import closeBg from "../Functions/closeBg";
+import RocketButton from "../Components/RocketButton";
 
 const Wrap = styled.div`
   padding-top: 6rem;
@@ -22,6 +23,8 @@ function Intro() {
   const skill = useRef();
   const contact = useRef();
   const buttonBg = useRef();
+  const title = useRef();
+  const rocket = useRef();
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -36,6 +39,7 @@ function Intro() {
     }
   }, []);
 
+  // 섹션별로이동
   const onClick = (ref) => {
     if (ref === "ABOUT") {
       bg.current.animate(
@@ -66,15 +70,40 @@ function Intro() {
       contact.current.scrollIntoView({ behavior: "smooth" });
     }
   };
+  // Top으로 이동
+  const rocketClick = () => {
+    rocket.current.animate(
+      [
+        { transform: "rotate(0deg)" },
+        { transform: "translateY(0px)", color: "red" },
+        { transform: "rotate(315deg)", color: "red" },
+        { transform: "rotate(315deg)", color: "red" },
+        { transform: "rotate(315deg)", color: "red" },
+        { transform: "rotate(315deg)", color: "red" },
+        { transform: "translateY(0px)" },
+      ],
+      {
+        delay: 0,
+        duration: 2000,
+        easing: "ease",
+        iterations: 1,
+        fill: "backwards",
+      }
+    );
+    setTimeout(() => {
+      title.current.scrollIntoView({ behavior: "smooth" });
+    }, 250);
+  };
 
   return (
     <div>
       <Header ref={buttonBg} onClick={onClick} />
       <Wrap ref={bg}>
-        <TitleBox />
+        <TitleBox ref={title} />
         <SkillBox ref={skill} />
         <PortfolioBox ref={folio} />
         <ContactBox ref={contact} />
+        <RocketButton ref={rocket} rocketClick={rocketClick} />
       </Wrap>
     </div>
   );
