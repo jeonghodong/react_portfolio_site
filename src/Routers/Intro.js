@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { useEffect, useRef } from "react";
+import { useEffect, useLayoutEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import ContactBox from "../Components/ContactBox";
 import SkillBox from "../Components/SkillBox";
@@ -27,8 +27,13 @@ function Intro() {
   const rocket = useRef();
   const navigate = useNavigate();
 
-  useEffect(() => {
+  // 왜 useEffect를 쓰면 화면 깜빡임이 나타나는가?
+  // 리액트 공식 문서를 확인해보면 useEffect와 useLayoutEffect의 실행 시점 때문에 이런 차이가 생긴다는 것을 알 수 있습니다. 공식 문서에서는 보통의 경우는 useEffect를 쓰되, 만약 사용자가 알아차리는 DOM 변경을 하게 될 경우는 useLayoutEffect를 쓰라고 언급하고 있습니다.
+  useLayoutEffect(() => {
     openBg(bg);
+  }, []);
+  //
+  useEffect(() => {
     // window.location.hash는 만약 주소에 "#ㅇㅇㅇ"이 들어가 있는지 확인
     // 만약 hash가 있으면 해당 페이지에서 hash로 이동
     // html이 불러와 진 후에 div의 id가 정렬 되기 때문에
@@ -94,7 +99,6 @@ function Intro() {
       title.current.scrollIntoView({ behavior: "smooth" });
     }, 250);
   };
-
   return (
     <div>
       <Header ref={buttonBg} onClick={onClick} />

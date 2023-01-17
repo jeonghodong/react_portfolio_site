@@ -1,4 +1,4 @@
-import { forwardRef, useEffect } from "react";
+import { forwardRef, useLayoutEffect } from "react";
 import PropTypes from "prop-types";
 import styled, { ThemeProvider } from "styled-components";
 import HeaderData from "../Data/HeaderData";
@@ -52,7 +52,7 @@ const Wrap = styled.div`
 `;
 
 const Header = forwardRef(({ onClick }, buttonBg) => {
-  useEffect(() => {
+  useLayoutEffect(() => {
     openBg(buttonBg);
   }, []);
 

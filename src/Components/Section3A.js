@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useLayoutEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import styled, { ThemeProvider } from "styled-components";
 import openBg from "../Functions/openBg";
@@ -32,7 +32,7 @@ const Wrap = styled.div`
 function Section3A() {
   const navigate = useNavigate();
   const bg = useRef();
-  useEffect(() => {
+  useLayoutEffect(() => {
     openBg(bg);
   }, []);
 

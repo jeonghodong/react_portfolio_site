@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useLayoutEffect, useRef } from "react";
 import styled, { ThemeProvider } from "styled-components";
 import openBg from "../Functions/openBg";
 import BackClickButton from "./BackClickButton";
@@ -98,7 +98,7 @@ const Wrap = styled.div`
 
 function Section3() {
   const bg = useRef();
-  useEffect(() => {
+  useLayoutEffect(() => {
     openBg(bg);
   }, []);
   return (

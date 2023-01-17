@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { useEffect, useRef } from "react";
+import { useLayoutEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import UpDownButton from "./UpDownButton";
 import openBg from "../Functions/openBg";
@@ -31,7 +31,7 @@ const Title = styled.span`
 function About() {
   const navigate = useNavigate();
   const bg = useRef();
-  useEffect(() => {
+  useLayoutEffect(() => {
     openBg(bg);
   }, []);
   const onClick = () => {
