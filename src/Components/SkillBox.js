@@ -3,7 +3,6 @@ import styled from "styled-components";
 import { SkillData } from "../Data/IntroData";
 
 const Wrap = styled.div`
-  // height: 100vh;
   font-family: "Poppins", sans-serif;
   max-width: 1200px;
   margin: 0 auto;

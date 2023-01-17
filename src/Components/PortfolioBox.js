@@ -54,7 +54,6 @@ const Bg = styled.div`
   padding-right: 2rem;
   opacity: 0.95;
   &:hover {
-    // transform: translateY(-500px);
     opacity: 0;
     transition: 0.5s;
   }
