@@ -1,6 +1,7 @@
 import { forwardRef } from "react";
-import styled, { keyframes } from "styled-components";
+import styled, { keyframes, ThemeProvider } from "styled-components";
 import PropTypes from "prop-types";
+import theme from "../styles/theme";
 
 const upDown = keyframes`
 0%{
@@ -15,21 +16,26 @@ const upDown = keyframes`
 `;
 
 const TopButton = styled.i`
+  @media ${(props) => props.theme.mobile} {
+    display: none;
+  }
   color: #0000c5;
   position: sticky;
-  bottom: 5rem;
+  bottom: 4rem;
   left: 93vw;
   z-index: 100;
-  font-size: 2.5vw;
+  font-size: 3vw;
   cursor: pointer;
   animation: ${upDown} 2.8s ease-in-out infinite;
 `;
 
 const RocketButton = forwardRef(({ rocketClick }, rocket) => {
   return (
-    <TopButton ref={rocket} onClick={rocketClick} className="fa-solid fa-rocket">
-      {" "}
-    </TopButton>
+    <ThemeProvider theme={theme}>
+      <TopButton ref={rocket} onClick={rocketClick} className="fa-solid fa-rocket">
+        {" "}
+      </TopButton>
+    </ThemeProvider>
   );
 });
 

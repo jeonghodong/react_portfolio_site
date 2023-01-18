@@ -1,11 +1,7 @@
 import { forwardRef } from "react";
 import { Link } from "react-router-dom";
-import styled from "styled-components";
-
-const Wrap = styled.div`
-  font-family: "Poppins", sans-serif;
-  padding-bottom: 10rem;
-`;
+import styled, { ThemeProvider } from "styled-components";
+import theme from "../styles/theme";
 
 const TitleText = styled.h2`
   font-size: 2.5vw;
@@ -67,33 +63,44 @@ const Bg1 = styled(Bg)`
 const Bg2 = styled(Bg)`
   background-color: #0000c5;
 `;
-
+const Wrap = styled.div`
+  @media ${(props) => props.theme.mobile} {
+    flex-direction: column;
+    ${TitleText} {
+      font-size: 22px;
+    }
+  }
+  font-family: "Poppins", sans-serif;
+  padding-bottom: 10rem;
+`;
 const PortfolioBox = forwardRef((_, folio) => {
   return (
-    <Wrap id="port" ref={folio}>
-      <TitleText>Portfolio</TitleText>
-      <SectionWrap>
-        <Section>
-          <Link to="/MovieAbout">
-            <Bg>React Movie App</Bg>
-          </Link>
-          <Img src="img/movie_app.PNG" alt="movie_app" />
-        </Section>
-        <Section>
-          <Link to="/ChartAbout">
-            <Bg1>React Chart App</Bg1>
-          </Link>
-          <Img src="img/chart.PNG" alt="chart_app" />
-        </Section>
-        <Section>
-          <Link to="/PortfolioAbout">
-            <Bg2>Portfolio</Bg2>
-          </Link>
-          <Img src="img/portfolio.png" alt="portfolio" />
-          Portfolio
-        </Section>
-      </SectionWrap>
-    </Wrap>
+    <ThemeProvider theme={theme}>
+      <Wrap id="port" ref={folio}>
+        <TitleText>Portfolio</TitleText>
+        <SectionWrap>
+          <Section>
+            <Link to="/MovieAbout">
+              <Bg>React Movie App</Bg>
+            </Link>
+            <Img src="img/movie_app.PNG" alt="movie_app" />
+          </Section>
+          <Section>
+            <Link to="/ChartAbout">
+              <Bg1>React Chart App</Bg1>
+            </Link>
+            <Img src="img/chart.PNG" alt="chart_app" />
+          </Section>
+          <Section>
+            <Link to="/PortfolioAbout">
+              <Bg2>Portfolio</Bg2>
+            </Link>
+            <Img src="img/portfolio.png" alt="portfolio" />
+            Portfolio
+          </Section>
+        </SectionWrap>
+      </Wrap>
+    </ThemeProvider>
   );
 });
 

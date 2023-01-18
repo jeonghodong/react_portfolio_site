@@ -1,12 +1,7 @@
 import { forwardRef } from "react";
-import styled from "styled-components";
+import styled, { ThemeProvider } from "styled-components";
 import { SkillData } from "../Data/IntroData";
-
-const Wrap = styled.div`
-  font-family: "Poppins", sans-serif;
-  max-width: 1200px;
-  margin: 0 auto;
-`;
+import theme from "../styles/theme";
 
 const SkillName = styled.h2`
   font-size: 2vw;
@@ -35,26 +30,45 @@ const SkillList = styled.div`
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   row-gap:30px
   justify-items: center;
+`;
 
+const Wrap = styled.div`
+  @media ${(props) => props.theme.mobile} {
+    flex-direction: column;
+    ${TitleText} {
+      font-size: 22px;
+    }
+    ${SkillName} {
+      font-size: 18px;
+    }
+    ${SkillsLi} {
+      font-size: 14px;
+    }
+  }
+  font-family: "Poppins", sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
 `;
 
 const SkillBox = forwardRef((_, skill) => {
   return (
-    <Wrap ref={skill}>
-      <TitleText>Skills</TitleText>
-      <SkillList>
-        {SkillData.map((v) => (
-          <div>
-            <SkillName>{v.name}</SkillName>
-            <SkillsUl>
-              {v.skills.map((v2) => (
-                <SkillsLi key={v2}>{v2}</SkillsLi>
-              ))}
-            </SkillsUl>
-          </div>
-        ))}
-      </SkillList>
-    </Wrap>
+    <ThemeProvider theme={theme}>
+      <Wrap ref={skill}>
+        <TitleText>Skills</TitleText>
+        <SkillList>
+          {SkillData.map((v) => (
+            <div>
+              <SkillName>{v.name}</SkillName>
+              <SkillsUl>
+                {v.skills.map((v2) => (
+                  <SkillsLi key={v2}>{v2}</SkillsLi>
+                ))}
+              </SkillsUl>
+            </div>
+          ))}
+        </SkillList>
+      </Wrap>
+    </ThemeProvider>
   );
 });
 

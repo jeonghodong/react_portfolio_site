@@ -89,6 +89,27 @@ const Wrap = styled.div`
       margin-right: 0;
     }
   }
+  @media ${(props) => props.theme.mobile} {
+    ${TitleName} {
+      font-size: 17px;
+    }
+    ${Acc} {
+      font-size: 12px;
+    }
+    ${Link} {
+      font-weight: bold;
+      font-size: 12px;
+      padding: 12px 12px;
+    }
+    ${Skills} {
+      margin-top: 2rem;
+      & li {
+        font-size: 0.7rem;
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
   background-color: white;
   padding-top: 200px;
   width: 80%;

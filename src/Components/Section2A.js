@@ -8,6 +8,7 @@ import theme from "../styles/theme";
 const TitleName = styled.h1`
   color: white;
   font-size: 5vw;
+  height: 100vw;
   font-weight: bold;
   text-align: right;
   position: relative;
@@ -20,6 +21,13 @@ const Wrap = styled.div`
     & ${TitleName} {
       text-align: center;
       margin-right: 0;
+    }
+  }
+  @media ${(props) => props.theme.mobile} {
+    ${TitleName} {
+      text-align: center;
+      margin-right: 0;
+      font-size: 30px;
     }
   }
   font-family: "Poppins", sans-serif;

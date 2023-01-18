@@ -35,8 +35,12 @@ const Ul = styled.ul`
 const Wrap = styled.div`
   @media ${(props) => props.theme.mobile} {
     flex-direction: column;
+    ${Logo} {
+      display: none;
+    }
     ${Button} {
-      padding-bottom: 1rem;
+      padding: 1rem 0 1rem 0;
+      font-size: 11px;
     }
   }
   font-family: "Poppins", sans-serif;

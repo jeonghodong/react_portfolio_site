@@ -19,31 +19,7 @@ const Line = styled.div`
   margin: 47px 0 47px 0;
   border-radius: 20px;
 `;
-const Wrap = styled.div`
-  @media ${(props) => props.theme.desktop} {
-    align-items: center;
-    ${Account}{
-    text-align:center;
-    }
-    ${Line}{
-      width: 80%
-    }
-  }
-    @media ${(props) => props.theme.mobile} {
-    ${Account}{
-    text-align:center;
-      width: 50%;
-    }
-  }
-  font-family: "Noto Sans KR", sans-serif;
-  display: flex;
-  flex-direction: column;
-  align-items: left;
-  padding-top 7rem;
-  max-width: 1200px;
-  margin: 0 auto;
-  
-`;
+
 const Cover = styled.p`
   padding: 50px 0 20px 0;
   font-size: 1vw;
@@ -65,6 +41,44 @@ const ProfilImg = styled.img`
   height: 100%;
   border-radius: 10%;
   border: 3px solid #022340;
+`;
+
+const Wrap = styled.div`
+  @media ${(props) => props.theme.desktop} {
+      align-items: center;
+      padding-top:2rem;
+    ${Account}{
+      text-align:center;
+    }
+    ${Line}{
+      width: 80%
+    }
+  }
+    @media ${(props) => props.theme.mobile} {
+    ${Account}{
+      text-align:center;
+      width: 80%;
+      font-size:13px;
+    }
+    ${Circle}{
+      width: 120px;
+      height: 120px; 
+    }
+    ${Name}{
+      font-size:18px;
+    }
+    ${Cover}{
+      font-size:12px;
+    }
+  }
+  font-family: "Noto Sans KR", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  padding-top 7rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  
 `;
 
 const TitleBox = forwardRef((_, title) => {

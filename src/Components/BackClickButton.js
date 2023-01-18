@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
-import styled, { keyframes } from "styled-components";
+import styled, { keyframes, ThemeProvider } from "styled-components";
+import theme from "../styles/theme";
 
 const rotate = keyframes`
   0%{
@@ -19,6 +20,8 @@ const rotate2 = keyframes`
 }`;
 
 const BackButton = styled.i`
+  @media ${(props) => props.theme.mobile} {
+  }
   position: absolute;
   top: 0;
   right: 0;
@@ -62,9 +65,11 @@ function BackClickButton() {
   };
 
   return (
-    <BackButton ref={button} onClick={onClick} className="fa-solid fa-xmark">
-      {" "}
-    </BackButton>
+    <ThemeProvider theme={theme}>
+      <BackButton ref={button} onClick={onClick} className="fa-solid fa-xmark">
+        {" "}
+      </BackButton>
+    </ThemeProvider>
   );
 }
 

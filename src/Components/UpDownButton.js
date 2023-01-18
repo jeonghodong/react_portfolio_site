@@ -1,5 +1,6 @@
-import styled, { keyframes } from "styled-components";
+import styled, { keyframes, ThemeProvider } from "styled-components";
 import PropTypes from "prop-types";
+import theme from "../styles/theme";
 
 const upDown = keyframes`
 0%{
@@ -19,6 +20,9 @@ const upDown = keyframes`
 }
 `;
 const Button = styled.span`
+  @media ${(props) => props.theme.mobile} {
+    font-size: 2.5rem;
+  }
   cursor: pointer;
   font-size: 3vw;
   position: absolute;
@@ -30,11 +34,11 @@ const Button = styled.span`
 
 function UpDownButton({ onClick }) {
   return (
-    <div>
+    <ThemeProvider theme={theme}>
       <Button onClick={onClick}>
         <i className="fa-solid fa-sort-down"> </i>
       </Button>
-    </div>
+    </ThemeProvider>
   );
 }
 
