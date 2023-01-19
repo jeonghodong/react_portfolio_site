@@ -9,7 +9,6 @@ const TitleName = styled.h1`
   color: white;
   font-size: 5vw;
   font-weight: bold;
-  height: 100vw;
   text-align: right;
   position: relative;
   top: 35%;
