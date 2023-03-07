@@ -26,7 +26,7 @@ const Wrap = styled.div`
       font-size: 1.2rem;
     }
   }
-  hegiht: 100vh;
+  height: 100vh;
   position: absolute;
   background-color: black;
   height: 100vh;
@@ -69,7 +69,7 @@ function About() {
         </TitleBox>
         <UpDownButton onClick={onClick} />
       </Wrap>
-    </ThemeProvider>
+    </ThemeProvider >
   );
 }
 

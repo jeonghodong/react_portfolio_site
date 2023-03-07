@@ -1,0 +1,11 @@
+.chart {
+  display: flex;
+  &_doughnut {
+    margin-right: 3rem;
+    border: 1px solid gray;
+    width: 30%;
+    margin-right: 5%;
+  }
+}
+
+// nth child로 margin 3번째꺼 해제하기
