@@ -148,6 +148,7 @@ function Section3() {
               <li>React</li>
               <li>Sass / Scss</li>
               <li>CSS in Js</li>
+              <li>CRA</li>
             </Skills>
           </Right>
         </Wrap>

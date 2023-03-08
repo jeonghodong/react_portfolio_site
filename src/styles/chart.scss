@@ -1,11 +1,27 @@
 .chart {
   display: flex;
-  &_doughnut {
-    margin-right: 3rem;
-    border: 1px solid gray;
-    width: 30%;
+  justify-content: center;
+
+  &_box {
     margin-right: 5%;
+    &:last-child {
+      margin: 0;
+    }
+    &_doughnut {
+      padding: 0.8rem;
+      border-radius: 20px;
+      box-shadow: inset 0px 0px 17px -11px #000000;
+      margin-bottom: 10rem;
+      background-color: #fefefe;
+      width: 30%;
+      margin-right: 5%;
+    }
+    &_text {
+      color: rgb(21, 0, 70);
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
   }
 }
-
-// nth child로 margin 3번째꺼 해제하기
