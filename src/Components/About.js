@@ -1,9 +1,15 @@
+/* eslint-disable no-plusplus */
+/* eslint-disable import/no-duplicates */
 import styled, { ThemeProvider } from "styled-components";
 import { useLayoutEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import UpDownButton from "./UpDownButton";
 import openBg from "../Functions/openBg";
 import theme from "../styles/theme";
+// eslint-disable-next-line import/order
+import { useState } from "react";
+// eslint-disable-next-line import/order
+import { useEffect } from "react";
 
 const TitleBox = styled.div`
   display: flex;
@@ -38,9 +44,25 @@ const Wrap = styled.div`
 function About() {
   const navigate = useNavigate();
   const bg = useRef();
+  const [typedText, setTypedText] = useState("");
+  const fullText = "안녕하세요. 프론트엔드 개발자 정호동입니다.";
+  const typingSpeed = 90; // adjust typing speed as desired
+
   useLayoutEffect(() => {
     openBg(bg);
   }, []);
+
+  useEffect(() => {
+    let index = 0;
+    const intervalId = setInterval(() => {
+      setTypedText((prev) => prev + fullText.charAt(index));
+      index++;
+      if (index === fullText.length) {
+        clearInterval(intervalId);
+      }
+    }, typingSpeed);
+  }, []);
+
   const onClick = () => {
     bg.current.animate(
       [
@@ -59,17 +81,17 @@ function About() {
       navigate("/About");
     }, 900);
   };
+
   return (
     <ThemeProvider theme={theme}>
       <Wrap ref={bg}>
         <TitleBox>
-          <Title>안녕하세요. 프론트엔드 개발자</Title>
+          <Title>{typedText}</Title>
           <br />
-          <Title>정호동입니다.</Title>
         </TitleBox>
         <UpDownButton onClick={onClick} />
       </Wrap>
-    </ThemeProvider >
+    </ThemeProvider>
   );
 }
 
