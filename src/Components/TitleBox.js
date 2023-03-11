@@ -1,6 +1,7 @@
 import { forwardRef } from "react";
 import styled, { ThemeProvider } from "styled-components";
 import theme from "../styles/theme";
+import profileImg from "../asset/ghost2.jpg"
 
 const Account = styled.span`
   text-align: left;
@@ -9,7 +10,6 @@ const Account = styled.span`
   font-size: 1.1vw;
   font-weight: 300;
   letter-spacing: 1px;
-  line-height: 23px;
 `;
 
 const Line = styled.div`
@@ -75,8 +75,8 @@ const Wrap = styled.div`
   display: flex;
   flex-direction: column;
   align-items: left;
-  padding-top 7rem;
-  max-width: 1200px;
+  padding-top: 1rem;
+  max-width: 900px;
   margin: 0 auto;
   
 `;
@@ -86,7 +86,7 @@ const TitleBox = forwardRef((_, title) => {
     <ThemeProvider theme={theme}>
       <Wrap ref={title}>
         <Circle>
-          <ProfilImg src="img/ghost2.jpg" alt="profil_img" />
+          <ProfilImg src={profileImg} alt="profil_img" />
         </Circle>
         <Cover>날이면 날마다 성장해나가는 개발자</Cover>
         <Name>정호동</Name>

@@ -45,7 +45,7 @@ function About() {
   const navigate = useNavigate();
   const bg = useRef();
   const [typedText, setTypedText] = useState("");
-  const fullText = "안녕하세요. 프론트엔드 개발자 정호동입니다.";
+  const fullText = "안녕녕하세요. 프론트엔드 개발자 정호동입니다.";
   const typingSpeed = 90; // adjust typing speed as desired
 
   useLayoutEffect(() => {
@@ -53,7 +53,7 @@ function About() {
   }, []);
 
   useEffect(() => {
-    let index = 0;
+    let index = 0; // change index initialization to 0
     const intervalId = setInterval(() => {
       setTypedText((prev) => prev + fullText.charAt(index));
       index++;

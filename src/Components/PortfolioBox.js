@@ -2,6 +2,9 @@ import { forwardRef } from "react";
 import { Link } from "react-router-dom";
 import styled, { ThemeProvider } from "styled-components";
 import theme from "../styles/theme";
+import chartImg from "../asset/chart.PNG"
+import portImg from "../asset/portfolio.png"
+import movieImg from "../asset/movie_app.PNG"
 
 const TitleText = styled.h2`
   font-size: 2.5vw;
@@ -83,19 +86,19 @@ const PortfolioBox = forwardRef((_, folio) => {
             <Link to="/MovieAbout">
               <Bg>React Movie App</Bg>
             </Link>
-            <Img src="img/movie_app.PNG" alt="movie_app" />
+            <Img src={movieImg} alt="movie_app" />
           </Section>
           <Section>
             <Link to="/ChartAbout">
               <Bg1>React Chart App</Bg1>
             </Link>
-            <Img src="img/chart.PNG" alt="chart_app" />
+            <Img src={chartImg} alt="chart_app" />
           </Section>
           <Section>
             <Link to="/PortfolioAbout">
               <Bg2>Portfolio</Bg2>
             </Link>
-            <Img src="img/portfolio.png" alt="portfolio" />
+            <Img src={portImg} alt="portfolio" />
             Portfolio
           </Section>
         </SectionWrap>
@@ -103,5 +106,6 @@ const PortfolioBox = forwardRef((_, folio) => {
     </ThemeProvider>
   );
 });
+
 
 export default PortfolioBox;

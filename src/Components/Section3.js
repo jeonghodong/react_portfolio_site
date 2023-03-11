@@ -3,6 +3,8 @@ import styled, { ThemeProvider } from "styled-components";
 import openBg from "../Functions/openBg";
 import BackClickButton from "./BackClickButton";
 import theme from "../styles/theme";
+import pImg2 from "../asset/img_portfolio2.png"
+
 
 const Skills = styled.ul`
   display: flex;
@@ -128,7 +130,7 @@ function Section3() {
         <BackClickButton />
         <Wrap ref={bg}>
           <Left>
-            <Img src="img/img_portfolio2.png" alt="PFimg" />
+            <Img src={pImg2} alt="PFimg" />
           </Left>
           <Right>
             <TitleName>Portfolio</TitleName>
