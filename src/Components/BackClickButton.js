@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
+import PropTypes from 'prop-types'
 import styled, { keyframes, ThemeProvider } from "styled-components";
 import theme from "../styles/theme";
 
@@ -45,9 +46,9 @@ const BackButton = styled.i`
   }
 `;
 
-function BackClickButton() {
+function BackClickButton({ onClick }) {
   const button = useRef();
-  const back = useNavigate();
+  // const back = useNavigate();
   useEffect(() => {
     button.current.animate(
       [
@@ -63,9 +64,9 @@ function BackClickButton() {
     );
   }, []);
 
-  const onClick = () => {
-    back("/About#port");
-  };
+  // const onClick = () => {
+  //   back("/About#port");
+  // };
 
   return (
     <ThemeProvider theme={theme}>
@@ -75,5 +76,9 @@ function BackClickButton() {
     </ThemeProvider>
   );
 }
+
+BackClickButton.propTypes = {
+  onClick: PropTypes.func.isRequired,
+};
 
 export default BackClickButton;

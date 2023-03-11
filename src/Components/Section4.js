@@ -1,8 +1,10 @@
 import { useLayoutEffect, useRef } from "react";
 import styled from "styled-components";
+import { useNavigate } from "react-router-dom";
 import openBg from "../Functions/openBg";
 import ChartImg from "../asset/chart.PNG"
 import BackClickButton from "./BackClickButton";
+import closeBg from "../Functions/closeBg";
 
 
 const Wrap = styled.div`
@@ -64,6 +66,9 @@ const GoLink = styled.a`
 function Section4() {
   const bg = useRef();
   const WrapBg = useRef();
+  const back = useNavigate();
+
+
   useLayoutEffect(() => {
     // FadeIn 효과
     openBg(bg);
@@ -80,9 +85,30 @@ function Section4() {
       }
     );
   }, []);
+
+  // FadeOut 효과
+  const onClick = () => {
+    closeBg(bg);
+    WrapBg.current.animate(
+      [
+        { opacity: "1" },
+        { opacity: "0" },
+      ],
+      {
+        delay: 0,
+        duration: 700,
+        easing: "ease",
+        iterations: 1,
+      }
+    );
+    setTimeout(() => {
+      back("/About#port");
+    }, 500);
+  };
+
   return (
     <Wrap ref={WrapBg}>
-      <BackClickButton />
+      <BackClickButton onClick={onClick} />
       <Paper ref={bg}>
         <TitleText>Photography Site</TitleText>
         <SkillBox>
