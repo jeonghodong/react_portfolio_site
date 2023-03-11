@@ -76,12 +76,14 @@ function Section1() {
       ],
       {
         delay: 0,
-        duration: 2000,
+        duration: 700,
         easing: "ease",
         iterations: 1,
       }
     );
   }, []);
+
+
   return (
     <Wrap ref={WrapBg} >
       <BackClickButton />

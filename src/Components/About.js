@@ -71,7 +71,7 @@ function About() {
       ],
       {
         delay: 0,
-        duration: 1100,
+        duration: 1000,
         easing: "ease",
         iterations: 1,
         fill: "forwards",
@@ -79,7 +79,7 @@ function About() {
     );
     setTimeout(() => {
       navigate("/About");
-    }, 900);
+    }, 500);
   };
 
   return (

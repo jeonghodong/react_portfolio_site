@@ -51,7 +51,7 @@ function Section2A() {
       ],
       {
         delay: 0,
-        duration: 1100,
+        duration: 1000,
         easing: "ease",
         iterations: 1,
         fill: "forwards",
@@ -59,7 +59,7 @@ function Section2A() {
     );
     setTimeout(() => {
       navigate("/SNS");
-    }, 900);
+    }, 500);
   };
   return (
     <ThemeProvider theme={theme}>

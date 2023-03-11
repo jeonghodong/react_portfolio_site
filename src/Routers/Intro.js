@@ -45,61 +45,7 @@ function Intro() {
   }, []);
 
   // 섹션별로이동 & About 이동 및 페이드효과 & PortfolioBox 버튼클릭시 주제별 링크이동
-  const onClick = (ref) => {
-    if (ref === "ABOUT") {
-      bg.current.animate(
-        [
-          { transform: "translateY(0px)", opacity: "1" },
-          { transform: "translateY(200px)", opacity: "0" },
-        ],
-        {
-          delay: 0,
-          duration: 800,
-          easing: "ease",
-          iterations: 1,
-          fill: "forwards",
-        }
-      );
-      closeBg(buttonBg);
-      setTimeout(() => {
-        navigate("/");
-      }, 500);
-    } else {
-      bg.current.animate(
-        [
-          { transform: "translateY(0px)", opacity: "1" },
-          { transform: "translateY(200px)", opacity: "0" },
-        ],
-        {
-          delay: 0,
-          duration: 800,
-          easing: "ease",
-          iterations: 1,
-          fill: "forwards",
-        }
-      );
-      closeBg(buttonBg);
-      if (ref === 1) {
-        setTimeout(() => {
-          navigate("/MovieAbout");
-        }, 500);
-      }
-      if (ref === 2) {
-        setTimeout(() => {
-          navigate("/SnsAbout");
-        }, 500)
-      };
-      if (ref === 3) {
-        setTimeout(() => {
-          navigate("/PortfolioAbout");
-        }, 500);
-      }
-      if (ref === 4) {
-        setTimeout(() => {
-          navigate("/PhotographyAbout");
-        }, 500);
-      }
-    }
+  const onClick = (ref, ref2) => {
     // 섹션별 이동
     if (ref === "SKILLS") {
       skill.current.scrollIntoView({ behavior: "smooth" });
@@ -109,6 +55,60 @@ function Intro() {
     }
     if (ref === "CONTACT") {
       contact.current.scrollIntoView({ behavior: "smooth" });
+    }
+    if (ref === "ABOUT") {
+      bg.current.animate(
+        [
+          { transform: "translateY(0px)", opacity: "1" },
+          { transform: "translateY(200px)", opacity: "0" },
+        ],
+        {
+          delay: 0,
+          duration: 700,
+          easing: "ease",
+          iterations: 1,
+          fill: "forwards",
+        }
+      );
+      closeBg(buttonBg);
+      setTimeout(() => {
+        navigate("/");
+      }, 450);
+    } else if (ref2 === true) {
+      bg.current.animate(
+        [
+          { transform: "translateY(0px)", opacity: "1" },
+          { transform: "translateY(200px)", opacity: "0" },
+        ],
+        {
+          delay: 0,
+          duration: 700,
+          easing: "ease",
+          iterations: 1,
+          fill: "forwards",
+        }
+      );
+      closeBg(buttonBg);
+      if (ref === 1) {
+        setTimeout(() => {
+          navigate("/MovieAbout");
+        }, 450);
+      }
+      if (ref === 2) {
+        setTimeout(() => {
+          navigate("/SnsAbout");
+        }, 450)
+      };
+      if (ref === 3) {
+        setTimeout(() => {
+          navigate("/PortfolioAbout");
+        }, 450);
+      }
+      if (ref === 4) {
+        setTimeout(() => {
+          navigate("/PhotographyAbout");
+        }, 450);
+      }
     }
   };
   // Top으로 이동

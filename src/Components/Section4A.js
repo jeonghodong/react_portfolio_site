@@ -51,7 +51,7 @@ function Section4A() {
       ],
       {
         delay: 0,
-        duration: 1100,
+        duration: 1000,
         easing: "ease",
         iterations: 1,
         fill: "forwards",
@@ -59,7 +59,7 @@ function Section4A() {
     );
     setTimeout(() => {
       navigate("/Photography");
-    }, 900);
+    }, 500);
   };
   return (
     <ThemeProvider theme={theme}>

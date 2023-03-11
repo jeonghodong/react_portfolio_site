@@ -84,19 +84,19 @@ const PortfolioBox = forwardRef(({ onClick }, folio) => {
       <Wrap id="port" ref={folio}>
         <TitleText>Portfolio</TitleText>
         <SectionWrap>
-          <Section onClick={() => onClick(1)}>
+          <Section onClick={() => onClick(1, true)}>
             <Bg >React Movie App</Bg>
             <Img src={movieImg} alt="movie_app" />
           </Section>
-          <Section onClick={() => onClick(2)}>
+          <Section onClick={() => onClick(2, true)}>
             <Bg1>SNS Team Project</Bg1>
             <Img src={chartImg} alt="chart_app" />
           </Section>
-          <Section onClick={() => onClick(3)}>
+          <Section onClick={() => onClick(3, true)}>
             <Bg2>This Portfolio</Bg2>
             <Img src={portImg} alt="portfolio" />
           </Section>
-          <Section onClick={() => onClick(4)}>
+          <Section onClick={() => onClick(4, true)}>
             <Bg2>Photography</Bg2>
             <Img src={portImg} alt="portfolio" />
           </Section>

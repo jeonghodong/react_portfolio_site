@@ -74,7 +74,7 @@ function Section4() {
       ],
       {
         delay: 0,
-        duration: 2000,
+        duration: 1000,
         easing: "ease",
         iterations: 1,
       }
