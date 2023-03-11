@@ -1,6 +1,6 @@
 import { forwardRef } from "react";
-import { Link } from "react-router-dom";
 import styled, { ThemeProvider } from "styled-components";
+import PropTypes from 'prop-types'
 import theme from "../styles/theme";
 import chartImg from "../asset/chart.PNG"
 import portImg from "../asset/portfolio.png"
@@ -20,6 +20,7 @@ const Section = styled.div`
   border-radius: 10px;
   position: relative;
   overflow: hidden;
+  cursor: pointer;
 `;
 
 const SectionWrap = styled.div`
@@ -77,34 +78,26 @@ const Wrap = styled.div`
   padding-bottom: 10rem;
 `;
 
-const PortfolioBox = forwardRef((_, folio) => {
+const PortfolioBox = forwardRef(({ onClick }, folio) => {
   return (
     <ThemeProvider theme={theme}>
       <Wrap id="port" ref={folio}>
         <TitleText>Portfolio</TitleText>
         <SectionWrap>
-          <Section>
-            <Link to="/MovieAbout">
-              <Bg>React Movie App</Bg>
-            </Link>
+          <Section onClick={() => onClick(1)}>
+            <Bg >React Movie App</Bg>
             <Img src={movieImg} alt="movie_app" />
           </Section>
-          <Section>
-            <Link to="/ChartAbout">
-              <Bg1>SNS Team Project</Bg1>
-            </Link>
+          <Section onClick={() => onClick(2)}>
+            <Bg1>SNS Team Project</Bg1>
             <Img src={chartImg} alt="chart_app" />
           </Section>
-          <Section>
-            <Link to="/PortfolioAbout">
-              <Bg2>This Portfolio</Bg2>
-            </Link>
+          <Section onClick={() => onClick(3)}>
+            <Bg2>This Portfolio</Bg2>
             <Img src={portImg} alt="portfolio" />
           </Section>
-          <Section>
-            <Link to="/PhotographyAbout">
-              <Bg2>Photography</Bg2>
-            </Link>
+          <Section onClick={() => onClick(4)}>
+            <Bg2>Photography</Bg2>
             <Img src={portImg} alt="portfolio" />
           </Section>
         </SectionWrap>
@@ -113,5 +106,8 @@ const PortfolioBox = forwardRef((_, folio) => {
   );
 });
 
+PortfolioBox.propTypes = {
+  onClick: PropTypes.func.isRequired,
+};
 
 export default PortfolioBox;

@@ -58,7 +58,7 @@ function Section2A() {
       }
     );
     setTimeout(() => {
-      navigate("/Chart");
+      navigate("/SNS");
     }, 900);
   };
   return (

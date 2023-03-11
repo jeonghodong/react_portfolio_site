@@ -33,8 +33,8 @@ function App() {
           <Route path="/About" element={<Intro />} />
           <Route path="/Movie" element={<MovieSection />} />
           <Route path="/MovieAbout" element={<MovieAbout />} />
-          <Route path="/Chart" element={<ChartSection />} />
-          <Route path="/ChartAbout" element={<ChartAbout />} />
+          <Route path="/SNS" element={<ChartSection />} />
+          <Route path="/SnsAbout" element={<ChartAbout />} />
           <Route path="/Portfolio" element={<PortfolioSection />} />
           <Route path="/PortfolioAbout" element={<PortfolioAbout />} />
           <Route path="/Photography" element={<PhotographySection />} />
