@@ -1,162 +1,87 @@
 import { useLayoutEffect, useRef } from "react";
-import styled, { ThemeProvider } from "styled-components";
+import styled from "styled-components";
 import openBg from "../Functions/openBg";
+import ChartImg from "../asset/chart.PNG"
 import BackClickButton from "./BackClickButton";
-import theme from "../styles/theme";
-import pImg2 from "../asset/img_portfolio2.png"
 
-
-const Skills = styled.ul`
-  display: flex;
-  justify-content: left;
-  font-family: "Poppins", sans-serif;
-  margin-top: 5rem;
-  & li {
-    font-size: 1.1vw;
-    padding: 1vw;
-    border-radius: 15px;
-    color: white;
-    font-weight: bold;
-    background-color: red;
-    margin-right: 1rem;
-    &:nth-last-child(2) {
-      background-color: navy;
-    }
-    &:nth-last-child(1) {
-      margin: 0;
-      background-color: orange;
-    }
-  }
-`;
-const Left = styled.div`
-  width: 50%;
-  margin-right: 10%;
-`;
-const Right = styled.div`
-  width: 40%;
-`;
-const Link = styled.a`
-  font-weight: bold;
-  font-size: 1vw;
-  border: 2px solid black;
-  margin-top: 1rem;
-  padding: 0.5vw 3vw;
-  border-radius: 1rem;
-  margin-right: 2rem;
-`;
-
-const Img = styled.img`
-  width: 100%;
-`;
-
-const TitleName = styled.h1`
-  font-family: "Poppins", sans-serif;
-  font-size: 2vw;
-  font-weight: bold;
-  margin-bottom: 3rem;
-`;
-
-const Acc = styled.p`
-  font-family: "Noto Sans KR", sans-serif;
-  margin-bottom: 3rem;
-  font-size: 0.9vw;
-`;
 
 const Wrap = styled.div`
-  @media ${(props) => props.theme.tablet} {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding-top: 13vw;
-    width: 100%;
+    background-color:#5a58d7a3;
+    position: fixed;
+    width: 100vw;
     height: 100vh;
-    ${Right} {
-      width: 50%;
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-    ${Left} {
-      margin: 0 0 3rem 0;
-      width: 50%;
-      align-items: center;
-      justify-content: center;
-    }
-    ${Skills} {
-      justify-content: center;
-    }
-    ${Link} {
-      margin-right: 0;
-    }
-  }
-  @media ${(props) => props.theme.mobile} {
-    ${TitleName} {
-      font-size: 17px;
-    }
-    ${Acc} {
-      font-size: 12px;
-    }
-    ${Link} {
-      font-weight: bold;
-      font-size: 12px;
-      padding: 12px 12px;
-    }
-    ${Skills} {
-      margin-top: 2rem;
-      & li {
-        font-size: 0.7rem;
-        display: flex;
-        align-items: center;
-      }
-    }
-  }
-  background-color: white;
-  padding-top: 200px;
-  width: 80%;
-  margin: 0 auto;
-  display: flex;
+    top: 0px;
+    left: 0px;
+    overflow-y: auto;
 `;
 
-function Section3() {
+const Paper = styled.div`
+    background-color:white;
+    width: 100vh;
+    max-width: 100%;
+    padding: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 12px;
+    margin: 2rem auto;
+`;
+const TitleText = styled.h1`
+  font-size:5rem;
+  margin-bottom:2rem;
+  font-weight:lighter;
+`;
+const InText = styled.h1`
+  word-wrap:break-word;
+  margin-bottom:2rem;
+  margin-top:2rem;
+  font-weight:300;
+  line-height:24px;
+`;
+
+const MovieImg = styled.img`
+  max-width:100%;
+  margin:2rem 0 2rem 0;
+`;
+
+const SkillBox = styled.div`
+  margin-bottom:3rem;
+`;
+
+const SkillText = styled.span`
+  font-size:1rem;
+  border:.5px solid black;
+  border-radius:10px;
+  padding:1.5px 10px;
+  font-weight:lighter;
+  margin-right:1rem;
+  &:nth-last-child(){
+    margin:0;
+  }
+`;
+
+function Section2() {
   const bg = useRef();
   useLayoutEffect(() => {
     openBg(bg);
   }, []);
   return (
-    <ThemeProvider theme={theme}>
-      <>
-        <BackClickButton />
-        <Wrap ref={bg}>
-          <Left>
-            <Img src={pImg2} alt="PFimg" />
-          </Left>
-          <Right>
-            <TitleName>Portfolio</TitleName>
-            <Acc>
-              리액트를 학습하며 제작한 데스크탑 페이지입니다.
-              <br />
-              <br />칸 국제영화제에 출품한 국내 작품을 연도별로 모아볼 수 있으며, 마우스 hover 시 작품 정보를 확인할 수
-              있습니다.
-            </Acc>
-            <Link href="https://jeonghodong.github.io/react_movie_app/" target="_blank" rel="noreferrer">
-              Link
-            </Link>
-            <Link href="https://github.com/jeonghodong/react_portfolio_site" target="_blank" rel="noreferrer">
-              GitHub
-            </Link>
-            <Skills>
-              <li>React</li>
-              <li>Sass / Scss</li>
-              <li>CSS in Js</li>
-              <li>CRA</li>
-            </Skills>
-          </Right>
-        </Wrap>
-      </>
-    </ThemeProvider>
+    <Wrap ref={bg}>
+      <BackClickButton />
+      <Paper>
+        <TitleText>This Portfolio</TitleText>
+        <SkillBox>
+          <SkillText>React</SkillText>
+          <SkillText>Scss/Sass</SkillText>
+          <SkillText>Styled Component (Css in Js)</SkillText>
+          <SkillText>Media Query</SkillText>
+          <SkillText>CRA</SkillText>
+        </SkillBox>
+        <MovieImg src={ChartImg} alt="ChartImg" />
+        <InText>안녕하세요. 이 차트앱의 설명글입니다. 안녕하세요. 이 차트앱의 설명글입니다.안녕하세요. 이 차트앱의 설명글입니다.안녕하세요. 이 차트앱의 설명글입니다.안녕하세요. 이 차트앱의 설명글입니다.안녕하세요. 이 차트앱의 설명글입니다.안녕하세요. 이 차트앱의 설명글입니다.안녕하세요. 이 차트앱의 설명글입니다.</InText>
+        <MovieImg src={ChartImg} alt="ChartImg" />
+        <InText>안녕하세요. 이 차트앱의 설명글입니다. 안녕하세요. 이 차트앱의 설명글입니다.안녕하세요. 이 차트앱의 설명글입니다.안녕하세요. 이 차트앱의 설명글입니다.안녕하세요. 이 차트앱의 설명글입니다.안녕하세요. 이 차트앱의 설명글입니다.안녕하세요. 이 차트앱의 설명글입니다.안녕하세요. 이 차트앱의 설명글입니다.</InText>
+        <MovieImg src={ChartImg} alt="ChartImg" />
+      </Paper>
+    </Wrap>
   );
 }
 
-export default Section3;
+export default Section2;

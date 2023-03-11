@@ -36,7 +36,7 @@ const Wrap = styled.div`
   z-index: 2;
 `;
 
-function Section2A() {
+function Section4A() {
   const navigate = useNavigate();
   const bg = useRef();
   useLayoutEffect(() => {
@@ -58,17 +58,17 @@ function Section2A() {
       }
     );
     setTimeout(() => {
-      navigate("/Chart");
+      navigate("/Photography");
     }, 900);
   };
   return (
     <ThemeProvider theme={theme}>
       <Wrap ref={bg}>
-        <TitleName>SNS TEAM PROJECT</TitleName>
+        <TitleName>Photography Site</TitleName>
         <UpDownButton onClick={onClick} />
       </Wrap>
     </ThemeProvider>
   );
 }
 
-export default Section2A;
+export default Section4A;

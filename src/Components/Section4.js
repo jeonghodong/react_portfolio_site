@@ -61,7 +61,7 @@ const GoLink = styled.a`
   color:#5a58d7a3 !important ;
 `;
 
-function Section2() {
+function Section4() {
   const bg = useRef();
   useLayoutEffect(() => {
     openBg(bg);
@@ -70,13 +70,12 @@ function Section2() {
     <Wrap ref={bg}>
       <BackClickButton />
       <Paper>
-        <TitleText>SNS Team Project</TitleText>
+        <TitleText>Photography Site</TitleText>
         <SkillBox>
-          <SkillText>React</SkillText>
-          <SkillText>Css</SkillText>
+          <SkillText>HTML</SkillText>
+          <SkillText>CSS</SkillText>
+          <SkillText>Javascript</SkillText>
           <SkillText>Media Query</SkillText>
-          <SkillText>Axios</SkillText>
-          <SkillText>Vite</SkillText>
         </SkillBox>
         <MovieImg src={ChartImg} alt="ChartImg" />
         <InText>안녕하세요. 이 차트앱의 설명글입니다. 안녕하세요. 이 차트앱의 설명글입니다.안녕하세요. 이 차트앱의 설명글입니다.안녕하세요. 이 차트앱의 설명글입니다.안녕하세요. 이 차트앱의 설명글입니다.안녕하세요. 이 차트앱의 설명글입니다.안녕하세요. 이 차트앱의 설명글입니다.안녕하세요. 이 차트앱의 설명글입니다.</InText>
@@ -84,11 +83,11 @@ function Section2() {
         <InText>안녕하세요. 이 차트앱의 설명글입니다. 안녕하세요. 이 차트앱의 설명글입니다.안녕하세요. 이 차트앱의 설명글입니다.안녕하세요. 이 차트앱의 설명글입니다.안녕하세요. 이 차트앱의 설명글입니다.안녕하세요. 이 차트앱의 설명글입니다.안녕하세요. 이 차트앱의 설명글입니다.안녕하세요. 이 차트앱의 설명글입니다.</InText>
         <MovieImg src={ChartImg} alt="ChartImg" />
         {/*  */}
-        <GoLink href="https://jeonghodong.github.io/react_movie_app/" target="_blank" rel="noreferrer" >
-          https://jeonghodong.github.io/react_movie_app/</GoLink>
+        <GoLink href="https://jeonghodong.github.io/photography_site_figma_clone/" target="_blank" rel="noreferrer" >
+          https://jeonghodong.github.io/photography_site_figma_clone/</GoLink>
       </Paper>
     </Wrap>
   );
 }
 
-export default Section2;
+export default Section4;

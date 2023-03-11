@@ -73,8 +73,8 @@ function Section1() {
         <TitleText>REACT MOVIE APP</TitleText>
         <SkillBox>
           <SkillText>React</SkillText>
-          <SkillText>Css Module</SkillText>
           <SkillText>Scss/Sass</SkillText>
+          <SkillText>Css Module (Css in Css)</SkillText>
           <SkillText>CRA</SkillText>
         </SkillBox>
         <MovieImg src={movieImg} alt="movieImg" />

@@ -25,7 +25,7 @@ const Section = styled.div`
 const SectionWrap = styled.div`
   display: grid;
   row-gap: 50px;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr ));
   justify-items: center;
 `;
 const Img = styled.img`
@@ -91,16 +91,21 @@ const PortfolioBox = forwardRef((_, folio) => {
           </Section>
           <Section>
             <Link to="/ChartAbout">
-              <Bg1>React Chart App</Bg1>
+              <Bg1>SNS Team Project</Bg1>
             </Link>
             <Img src={chartImg} alt="chart_app" />
           </Section>
           <Section>
             <Link to="/PortfolioAbout">
-              <Bg2>Portfolio</Bg2>
+              <Bg2>This Portfolio</Bg2>
             </Link>
             <Img src={portImg} alt="portfolio" />
-            Portfolio
+          </Section>
+          <Section>
+            <Link to="/PhotographyAbout">
+              <Bg2>Photography</Bg2>
+            </Link>
+            <Img src={portImg} alt="portfolio" />
           </Section>
         </SectionWrap>
       </Wrap>

@@ -7,6 +7,8 @@ import ChartAbout from "./Routers/ChartAbout";
 import Home from "./Routers/Home";
 import PortfolioSection from "./Routers/PortfolioSection";
 import PortfolioAbout from "./Routers/PortfolioAbout";
+import PhotographySection from "./Routers/PhotographySection";
+import PhotographyAbout from "./Routers/PhotographyAbout ";
 import Intro from "./Routers/Intro";
 
 const Wrap = styled.div`
@@ -35,6 +37,8 @@ function App() {
           <Route path="/ChartAbout" element={<ChartAbout />} />
           <Route path="/Portfolio" element={<PortfolioSection />} />
           <Route path="/PortfolioAbout" element={<PortfolioAbout />} />
+          <Route path="/Photography" element={<PhotographySection />} />
+          <Route path="/PhotographyAbout" element={<PhotographyAbout />} />
         </Routes>
       </Router>
     </Wrap>
