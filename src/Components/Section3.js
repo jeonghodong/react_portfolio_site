@@ -59,13 +59,27 @@ const SkillText = styled.span`
 
 function Section2() {
   const bg = useRef();
+  const WrapBg = useRef();
   useLayoutEffect(() => {
+    // FadeIn 효과
     openBg(bg);
+    WrapBg.current.animate(
+      [
+        { opacity: "0" },
+        { opacity: "1" },
+      ],
+      {
+        delay: 0,
+        duration: 2000,
+        easing: "ease",
+        iterations: 1,
+      }
+    );
   }, []);
   return (
-    <Wrap ref={bg}>
+    <Wrap ref={WrapBg}>
       <BackClickButton />
-      <Paper>
+      <Paper ref={bg}>
         <TitleText>This Portfolio</TitleText>
         <SkillBox>
           <SkillText>React</SkillText>
