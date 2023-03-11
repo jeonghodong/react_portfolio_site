@@ -26,7 +26,9 @@ const BackButton = styled.i`
   top: 0;
   right: 0;
   font-size: 2.3vw;
-  margin: 2rem 5rem 0rem 0rem;
+  margin: 2rem 3rem 0rem 0rem;
+  color:white;
+  opacity:50%;
   cursor: pointer;
   animation: ${rotate} 3s ease-in-out infinite;
   &:hover {
@@ -35,6 +37,7 @@ const BackButton = styled.i`
     right: -10px;
     animation: ${rotate2} 0.5s ease;
     animation-fill-mode: forwards;
+    opacity:100%;
   }
   &:not(:hover) {
     transition: 0.5s ease-out;

@@ -8,7 +8,7 @@ const Account = styled.span`
   word-break: break-all;
   width: 100%;
   font-size: 1.1vw;
-  font-weight: 300;
+  font-weight:lighter;
   letter-spacing: 1px;
 `;
 

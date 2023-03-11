@@ -76,6 +76,7 @@ const Wrap = styled.div`
   font-family: "Poppins", sans-serif;
   padding-bottom: 10rem;
 `;
+
 const PortfolioBox = forwardRef((_, folio) => {
   return (
     <ThemeProvider theme={theme}>
