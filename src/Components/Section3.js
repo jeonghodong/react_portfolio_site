@@ -1,10 +1,12 @@
+/* eslint-disable react/no-unescaped-entities */
 import { useLayoutEffect, useRef } from "react";
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
 import openBg from "../Functions/openBg";
-import ChartImg from "../asset/chart.PNG"
+import portImg from "../asset/sns_home.png"
 import BackClickButton from "./BackClickButton";
 import closeBg from "../Functions/closeBg";
+
 
 
 const Wrap = styled.div`
@@ -111,14 +113,18 @@ function Section2() {
           <SkillText>React</SkillText>
           <SkillText>Scss/Sass</SkillText>
           <SkillText>Styled Component (Css in Js)</SkillText>
+          <SkillText>Chart.js</SkillText>
           <SkillText>Media Query</SkillText>
           <SkillText>CRA</SkillText>
         </SkillBox>
-        <MovieImg src={ChartImg} alt="ChartImg" />
-        <InText>안녕하세요. 이 차트앱의 설명글입니다. 안녕하세요. 이 차트앱의 설명글입니다.안녕하세요. 이 차트앱의 설명글입니다.안녕하세요. 이 차트앱의 설명글입니다.안녕하세요. 이 차트앱의 설명글입니다.안녕하세요. 이 차트앱의 설명글입니다.안녕하세요. 이 차트앱의 설명글입니다.안녕하세요. 이 차트앱의 설명글입니다.</InText>
-        <MovieImg src={ChartImg} alt="ChartImg" />
-        <InText>안녕하세요. 이 차트앱의 설명글입니다. 안녕하세요. 이 차트앱의 설명글입니다.안녕하세요. 이 차트앱의 설명글입니다.안녕하세요. 이 차트앱의 설명글입니다.안녕하세요. 이 차트앱의 설명글입니다.안녕하세요. 이 차트앱의 설명글입니다.안녕하세요. 이 차트앱의 설명글입니다.안녕하세요. 이 차트앱의 설명글입니다.</InText>
-        <MovieImg src={ChartImg} alt="ChartImg" />
+        <MovieImg src={portImg} alt="ChartImg" />
+        <InText>
+          리액트로 포트폴리오용 사이트를 만들기 전 고민이 많았습니다.<br /><br />
+          당연 템플릿 오픈 소스도 많이 있었구요.<br /><br />
+          "흔히 1개의 페이지에 스크롤 식으로 해서 만들까.." 하다가 문득 든 생각이<br /><br />
+          "HTML, CSS, JS로 만들면 되지 굳이 리액트를 써서 만들어야하나?" 라고<br /><br />
+          생각이 되었고 리액트는 SPA로서 앱과 같은 경험을 제공해주니 리액트를 이용하여<br /><br />
+          역동적이고 심플한 포트폴리오용 사이트를 보여주고 싶었습니다. </InText>
       </Paper>
     </Wrap>
   );

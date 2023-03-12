@@ -2,7 +2,8 @@ import { useLayoutEffect, useRef } from "react";
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
 import openBg from "../Functions/openBg";
-import movieImg from "../asset/movie_app.PNG"
+import movieImg from "../asset/무비_home.png"
+import movieImg2 from "../asset/무비_클릭시_예고편.png"
 import BackClickButton from "./BackClickButton";
 import closeBg from "../Functions/closeBg";
 
@@ -119,15 +120,18 @@ function Section1() {
           <SkillText>CRA</SkillText>
         </SkillBox>
         <MovieImg src={movieImg} alt="movieImg" />
-        <InText>안녕하세요. 이 영화앱의 설명글입니다. 안녕하세요. 이 영화앱의 설명글입니다.안녕하세요. 이 영화앱의 설명글입니다.안녕하세요. 이 영화앱의 설명글입니다.안녕하세요. 이 영화앱의 설명글입니다.안녕하세요. 이 영화앱의 설명글입니다.안녕하세요. 이 영화앱의 설명글입니다.안녕하세요. 이 영화앱의 설명글입니다.</InText>
-        <MovieImg src={movieImg} alt="movieImg" />
-        <InText>안녕하세요. 이 영화앱의 설명글입니다. 안녕하세요. 이 영화앱의 설명글입니다.안녕하세요. 이 영화앱의 설명글입니다.안녕하세요. 이 영화앱의 설명글입니다.안녕하세요. 이 영화앱의 설명글입니다.안녕하세요. 이 영화앱의 설명글입니다.안녕하세요. 이 영화앱의 설명글입니다.안녕하세요. 이 영화앱의 설명글입니다.</InText>
-        <MovieImg src={movieImg} alt="movieImg" />
+        <InText>안녕하세요.<br /><br />
+          이 프로젝트는 처음 React를 공부하고 프로젝트를 진행할때 정말 많이 도움이 되었던 프로젝트 입니다.<br /><br />
+          이 앱은 개인 프로젝트이며 오픈API를 활용한 React 영화 앱이고 카테고리 별로 이동이 가능하며 피드는 최신순으로 나열이됩니다.<br />
+        </InText >
+        <MovieImg src={movieImg2} alt="movieImg" />
+        <InText>특정한 영화를 클릭할 시 해당 영화의 예고편을 볼 수 있는 페이지로 이동합니다.</InText>
+        <InText>반응형 작업은 아직 진행이 안되었습니다.<br /></InText>
         {/*  */}
         <GoLink href="https://jeonghodong.github.io/react_movie_app/" target="_blank" rel="noreferrer" >
           https://jeonghodong.github.io/react_movie_app/</GoLink>
-      </Paper>
-    </Wrap>
+      </Paper >
+    </Wrap >
   );
 }
 

@@ -2,7 +2,9 @@ import { useLayoutEffect, useRef } from "react";
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
 import openBg from "../Functions/openBg";
-import ChartImg from "../asset/chart.PNG"
+import photoImg from "../asset/photo_home.png"
+import photoImg1 from "../asset/photo_section.png"
+import photoImg2 from "../asset/photo_section2.png"
 import BackClickButton from "./BackClickButton";
 import closeBg from "../Functions/closeBg";
 
@@ -117,11 +119,11 @@ function Section4() {
           <SkillText>Javascript</SkillText>
           <SkillText>Media Query</SkillText>
         </SkillBox>
-        <MovieImg src={ChartImg} alt="ChartImg" />
+        <MovieImg src={photoImg} alt="ChartImg" />
+        <InText>HTML, CSS, JS를 공부할때 Figma 자료들을 이용을 많이 하였습니다. 그때 기본적인 HTML, CSS를 익히는데 큰 도움이 많이 되었고 이 Photography Site는 그 중 하나입니다.</InText>
+        <MovieImg src={photoImg1} alt="ChartImg" />
         <InText>안녕하세요. 이 차트앱의 설명글입니다. 안녕하세요. 이 차트앱의 설명글입니다.안녕하세요. 이 차트앱의 설명글입니다.안녕하세요. 이 차트앱의 설명글입니다.안녕하세요. 이 차트앱의 설명글입니다.안녕하세요. 이 차트앱의 설명글입니다.안녕하세요. 이 차트앱의 설명글입니다.안녕하세요. 이 차트앱의 설명글입니다.</InText>
-        <MovieImg src={ChartImg} alt="ChartImg" />
-        <InText>안녕하세요. 이 차트앱의 설명글입니다. 안녕하세요. 이 차트앱의 설명글입니다.안녕하세요. 이 차트앱의 설명글입니다.안녕하세요. 이 차트앱의 설명글입니다.안녕하세요. 이 차트앱의 설명글입니다.안녕하세요. 이 차트앱의 설명글입니다.안녕하세요. 이 차트앱의 설명글입니다.안녕하세요. 이 차트앱의 설명글입니다.</InText>
-        <MovieImg src={ChartImg} alt="ChartImg" />
+        <MovieImg src={photoImg2} alt="ChartImg" />
         {/*  */}
         <GoLink href="https://jeonghodong.github.io/photography_site_figma_clone/" target="_blank" rel="noreferrer" >
           https://jeonghodong.github.io/photography_site_figma_clone/</GoLink>

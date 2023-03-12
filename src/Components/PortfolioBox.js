@@ -2,9 +2,10 @@ import { forwardRef } from "react";
 import styled, { ThemeProvider } from "styled-components";
 import PropTypes from 'prop-types'
 import theme from "../styles/theme";
-import chartImg from "../asset/chart.PNG"
+import SNSImg from "../asset/sns_home.png"
 import portImg from "../asset/portfolio.png"
-import movieImg from "../asset/movie_app.PNG"
+import photoImg from "../asset/photo_home.png"
+import movieImg from "../asset/무비_home.png"
 
 const TitleText = styled.h2`
   font-size: 2.5vw;
@@ -90,7 +91,7 @@ const PortfolioBox = forwardRef(({ onClick }, folio) => {
           </Section>
           <Section onClick={() => onClick(2, true)}>
             <Bg1>SNS Team Project</Bg1>
-            <Img src={chartImg} alt="chart_app" />
+            <Img src={SNSImg} alt="sns_app" />
           </Section>
           <Section onClick={() => onClick(3, true)}>
             <Bg2>This Portfolio</Bg2>
@@ -98,7 +99,7 @@ const PortfolioBox = forwardRef(({ onClick }, folio) => {
           </Section>
           <Section onClick={() => onClick(4, true)}>
             <Bg2>Photography</Bg2>
-            <Img src={portImg} alt="portfolio" />
+            <Img src={photoImg} alt="portfolio" />
           </Section>
         </SectionWrap>
       </Wrap>
