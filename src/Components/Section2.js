@@ -136,10 +136,11 @@ function Section2() {
           <SkillText>Redux Toolkit</SkillText>
           <SkillText>Vite</SkillText>
         </SkillBox>
-        <InText>총인원 5명 프론트엔드3명 백엔드1명 DB1명 제가 속한 곳은 프론트엔드입니다.<br /><br />
-          제 역할은 MainFeed 전체작업을 하였고 진행하다보니 전체 세부 기능부분 및 & 로그인 Axios 처리 & react-router-dom 등 등 다양한 부분도 맡아서 하게되었고 말한거 외에도 배워간 것이 많았던 좋은 경험의 팀 프로젝트 였습니다.<br /><br />
-
-          아래는 간략하게 제가 담당했던 파트 중 눈에 보이는 부분들로 보기좋게 정리하였습니다.
+        <InText>
+          안녕하세요. 정호동입니다.<br /><br />
+          이 작업물은 총인원 5명 프런트엔드 3명 백엔드 1명 DB1명에서 진행한 제 첫 팀 프로젝트입니다. 제가 속한 곳은 프론트엔드입니다.<br /><br />
+          제 역할은 MainFeed 전체 작업을 하였고 진행하다 보니 전체 세부 기능 부분 및 & 로그인 Axios 처리 & react-router-dom 등등 다양한 부분도 맡아서 하게 되었고 말한 거 외에도 배워간 것이 많았던 좋은 경험의 팀 프로젝트였습니다.<br /><br />
+          아래는 간략하게 제가 담당했던 파트 중 눈에 보이는 부분들로 보기 좋게 정리하였습니다.
           <Line />
         </InText>
         <H2>로그인 후 MainFeed(Home) Page 진입</H2>

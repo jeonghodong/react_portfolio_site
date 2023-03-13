@@ -120,9 +120,9 @@ function Section1() {
           <SkillText>CRA</SkillText>
         </SkillBox>
         <MovieImg src={movieImg} alt="movieImg" />
-        <InText>안녕하세요.<br /><br />
-          이 프로젝트는 처음 React를 공부하고 프로젝트를 진행할때 정말 많이 도움이 되었던 프로젝트 입니다.<br /><br />
-          이 앱은 개인 프로젝트이며 오픈API를 활용한 React 영화 앱이고 카테고리 별로 이동이 가능하며 피드는 최신순으로 나열이됩니다.<br />
+        <InText>안녕하세요. 정호동입니다.<br /><br />
+          이 프로젝트는 처음 React를 공부하고 프로젝트를 진행할 때 정말 많이 도움이 되었던 프로젝트입니다.<br /><br />
+          이 앱은 개인 프로젝트이며 오픈 API를 활용한 React 영화 앱이고 카테고리 별로 이동이 가능하며 피드는 최신순으로 나열이 됩니다.<br />
         </InText >
         <MovieImg src={movieImg2} alt="movieImg" />
         <InText>특정한 영화를 클릭할 시 해당 영화의 예고편을 볼 수 있는 페이지로 이동합니다.</InText>

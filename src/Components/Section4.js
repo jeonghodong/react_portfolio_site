@@ -120,9 +120,15 @@ function Section4() {
           <SkillText>Media Query</SkillText>
         </SkillBox>
         <MovieImg src={photoImg} alt="ChartImg" />
-        <InText>HTML, CSS, JS를 공부할때 Figma 자료들을 이용을 많이 하였습니다. 그때 기본적인 HTML, CSS를 익히는데 큰 도움이 많이 되었고 이 Photography Site는 그 중 하나입니다.</InText>
+        <InText>
+          안녕하세요. 정호동입니다.<br /><br />
+          이 작업물은 HTML, CSS, JS를 공부할 때 Figma 자료들을 이용을 많이 하였습니다.<br /><br />
+          그때 기본적인 HTML, CSS를 익히는데 큰 도움이 많이 되었고 이 Photography Site는 그중 하나입니다.</InText>
         <MovieImg src={photoImg1} alt="ChartImg" />
-        <InText>안녕하세요. 이 차트앱의 설명글입니다. 안녕하세요. 이 차트앱의 설명글입니다.안녕하세요. 이 차트앱의 설명글입니다.안녕하세요. 이 차트앱의 설명글입니다.안녕하세요. 이 차트앱의 설명글입니다.안녕하세요. 이 차트앱의 설명글입니다.안녕하세요. 이 차트앱의 설명글입니다.안녕하세요. 이 차트앱의 설명글입니다.</InText>
+        <InText>
+          Figma 자료들을 클론 하며 배워갔던 것들 중 가장 큰 배움은 CSS의 레이아웃 배치의 이해였습니다.<br /><br />
+          float, flex, grid, postion의 사용에 큰 배움을 얻었습니다.
+        </InText>
         <MovieImg src={photoImg2} alt="ChartImg" />
         {/*  */}
         <GoLink href="https://jeonghodong.github.io/photography_site_figma_clone/" target="_blank" rel="noreferrer" >
