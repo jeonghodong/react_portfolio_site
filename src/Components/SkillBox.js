@@ -21,7 +21,7 @@ const TitleText = styled.h2`
   font-size: 2vw;
   font-weight: bold;
   color: #0000c5;
-  padding: 12rem 0 8rem 0;
+  padding: 10rem 0 8rem 0;
   text-align: center;
 `;
 
@@ -134,7 +134,7 @@ const SkillBox = forwardRef((_, skill) => {
             <Doughnut type="doughnut" data={doughnutJsData} width="350px" height="350px" options={{ responsive: false, }} className="chart_box_doughnut" />
           </div>
         </div>
-        <Bar type="bar" data={BarData} style={{ margin: "0 auto" }} width="1200px" height="500px" options={{ responsive: false, }} />
+        <Bar type="bar" data={BarData} style={{ margin: "0 auto" }} width="1000px" height="400px" options={{ responsive: false, }} className="chart_bar" />
       </Wrap>
     </ThemeProvider>
   );

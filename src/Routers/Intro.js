@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import { useEffect, useLayoutEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import ContactBox from "../Components/ContactBox";
 import SkillBox from "../Components/SkillBox";
 import TitleBox from "../Components/TitleBox";
@@ -43,7 +45,9 @@ function Intro() {
       window.location.href = `${window.location.hash}`;
     }
   }, []);
-
+  useEffect(() => {
+    AOS.init();
+  })
   // 섹션별로이동 & About 이동 및 페이드효과 & PortfolioBox 버튼클릭시 주제별 링크이동
   const onClick = (ref, ref2) => {
     // 섹션별 이동
@@ -140,9 +144,18 @@ function Intro() {
       <Header ref={buttonBg} onClick={onClick} />
       <Wrap ref={bg}>
         <TitleBox ref={title} />
-        <SkillBox ref={skill} />
-        <PortfolioBox onClick={onClick} ref={folio} />
-        <ContactBox ref={contact} />
+        <div data-aos="fade-up"
+          data-aos-duration="2000">
+          <SkillBox ref={skill} />
+        </div>
+        <div data-aos="fade-up"
+          data-aos-duration="2000">
+          <PortfolioBox onClick={onClick} ref={folio} />
+        </div>
+        <div data-aos="fade-up"
+          data-aos-duration="1000">
+          <ContactBox ref={contact} />
+        </div>
         <RocketButton ref={rocket} rocketClick={rocketClick} />
       </Wrap>
     </div>

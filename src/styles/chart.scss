@@ -1,7 +1,11 @@
 .chart {
   display: flex;
   justify-content: center;
-
+  &_bar {
+    padding: 0.8rem;
+    border-radius: 20px;
+    box-shadow: inset 0px 0px 17px -11px #000000;
+  }
   &_box {
     margin-right: 5%;
     &:last-child {
@@ -22,6 +26,40 @@
       justify-content: center;
       margin-bottom: 20px;
       font-weight: bold;
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .chart {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    &_bar {
+      width: 100vw;
+      padding: 0.8rem;
+      border-radius: 20px;
+      box-shadow: inset 0px 0px 17px -11px #000000;
+    }
+    &_box {
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      &:last-child {
+        margin: 0;
+      }
+      &_doughnut {
+        padding: 0.8rem;
+        border-radius: 20px;
+        box-shadow: inset 0px 0px 17px -11px #000000;
+        margin-bottom: 5rem;
+        background-color: #fefefe;
+        width: 30%;
+        margin-right: 0;
+      }
+      &_text {
+        display: none;
+      }
     }
   }
 }

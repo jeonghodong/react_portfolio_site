@@ -1,4 +1,6 @@
-import { forwardRef, useLayoutEffect } from "react";
+/* eslint-disable no-shadow */
+/* eslint-disable func-names */
+import { forwardRef, useEffect, useLayoutEffect, useRef, useState } from "react";
 import PropTypes from "prop-types";
 import styled, { ThemeProvider } from "styled-components";
 import HeaderData from "../Data/HeaderData";
@@ -53,16 +55,49 @@ const Wrap = styled.div`
   width: 100%;
   padding: 0 5vw 0 5vw;
   z-index: 2;
+  transition:1s;
+  &.hide {
+        transform: translateY(-80px);
+        transition:1s;
+    }
 `;
 
 const Header = forwardRef(({ onClick }, buttonBg) => {
+  const [hide, setHide] = useState(false);
+  const [pageY, setPageY] = useState(0);
+  const documentRef = useRef(document);
+  const throttle = function (callback, waitTime) {
+    let timerId = null;
+    return (e) => {
+      if (timerId) return;
+      timerId = setTimeout(() => {
+        callback.call(this, e);
+        timerId = null;
+      }, waitTime);
+    };
+  };
   useLayoutEffect(() => {
     openBg(buttonBg);
   }, []);
 
+  const handleScroll = () => {
+    const { pageYOffset } = window;
+    const deltaY = pageYOffset - pageY;
+    const hide = pageYOffset !== 0 && deltaY >= 0;
+    setHide(hide);
+    setPageY(pageYOffset);
+  };
+
+  const throttleScroll = throttle(handleScroll, 50);
+
+  useEffect(() => {
+    documentRef.current.addEventListener('scroll', throttleScroll);
+    return () => documentRef.current.removeEventListener('scroll', throttleScroll);
+  }, [pageY]);
+
   return (
     <ThemeProvider theme={theme}>
-      <Wrap ref={buttonBg}>
+      <Wrap className={hide && 'hide'} ref={buttonBg}>
         <Logo>HODONG</Logo>
         <Ul>
           {HeaderData.map((v) => (
