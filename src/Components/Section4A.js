@@ -31,7 +31,7 @@ const Wrap = styled.div`
   }
   font-family: "Poppins", sans-serif;
   position: relative;
-  background-color: #5a58d7;
+  background-color: #8c6f00;
   height: 100vh;
   z-index: 2;
 `;

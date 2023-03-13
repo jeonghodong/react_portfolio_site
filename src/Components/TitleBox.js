@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import { forwardRef } from "react";
 import styled, { ThemeProvider } from "styled-components";
 import theme from "../styles/theme";
@@ -92,12 +93,11 @@ const TitleBox = forwardRef((_, title) => {
         <Name>정호동</Name>
         <Line> </Line>
         <Account>
-          {/* 작업예정 */}
-          안녕하세요.
+          안녕하세요. 정호동입니다.
           <br />
           <br />
           <br />
-          니즈를 파악하여 주제에 맞는 디자인을 하는 것 어떠한 사용자 편리하고 보기 좋은 디자인을 하는 것
+          '세상을 만들어가는 것 같은 기분'
           <br />
           <br />
           단순하고 진부한 디자인이 아닌 개성있 는 기업의 매출을 극대화하는 디자인

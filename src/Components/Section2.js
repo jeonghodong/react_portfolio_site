@@ -16,7 +16,7 @@ import closeBg from "../Functions/closeBg";
 
 
 const Wrap = styled.div`
-    background-color:#5a58d7a3;
+    background-color:#00ff6fbd;
     position: fixed;
     width: 100vw;
     height: 100vh;
@@ -67,7 +67,7 @@ const SkillText = styled.span`
 `;
 
 const GoLink = styled.a`
-  color:#5a58d7a3 !important ;
+  color:#00ff6fbd !important ;
 `;
 
 const H2 = styled.span`

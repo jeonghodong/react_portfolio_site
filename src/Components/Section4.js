@@ -10,7 +10,7 @@ import closeBg from "../Functions/closeBg";
 
 
 const Wrap = styled.div`
-    background-color:#5a58d7a3;
+    background-color:#8c6f00a8;
     position: fixed;
     width: 100vw;
     height: 100vh;
@@ -62,7 +62,7 @@ const SkillText = styled.span`
 `;
 
 const GoLink = styled.a`
-  color:#5a58d7a3 !important ;
+  color:#8c6f00a8 !important ;
 `;
 
 function Section4() {
@@ -122,12 +122,12 @@ function Section4() {
         <MovieImg src={photoImg} alt="ChartImg" />
         <InText>
           안녕하세요. 정호동입니다.<br /><br />
-          이 작업물은 HTML, CSS, JS를 공부할 때 Figma 자료들을 이용을 많이 하였습니다.<br /><br />
+          HTML, CSS, JS를 공부할 때 Figma 자료들을 이용을 많이 하였습니다.<br /><br />
           그때 기본적인 HTML, CSS를 익히는데 큰 도움이 많이 되었고 이 Photography Site는 그중 하나입니다.</InText>
         <MovieImg src={photoImg1} alt="ChartImg" />
         <InText>
           Figma 자료들을 클론 하며 배워갔던 것들 중 가장 큰 배움은 CSS의 레이아웃 배치의 이해였습니다.<br /><br />
-          float, flex, grid, postion의 사용에 큰 배움을 얻었습니다.
+          float, flex, grid, position의 사용에 큰 배움을 얻었습니다.
         </InText>
         <MovieImg src={photoImg2} alt="ChartImg" />
         {/*  */}

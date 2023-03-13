@@ -63,10 +63,13 @@ const Bg = styled.div`
   }
 `;
 const Bg1 = styled(Bg)`
-  background-color: #5a58d7;
+  background-color: #00ff6f;
 `;
 const Bg2 = styled(Bg)`
   background-color: #0000c5;
+`;
+const Bg3 = styled(Bg)`
+  background-color: #8c6f00;
 `;
 const Wrap = styled.div`
   @media ${(props) => props.theme.mobile} {
@@ -98,7 +101,7 @@ const PortfolioBox = forwardRef(({ onClick }, folio) => {
             <Img src={portImg} alt="portfolio" />
           </Section>
           <Section onClick={() => onClick(4, true)}>
-            <Bg2>Photography</Bg2>
+            <Bg3>Photography</Bg3>
             <Img src={photoImg} alt="portfolio" />
           </Section>
         </SectionWrap>
