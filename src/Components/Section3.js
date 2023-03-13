@@ -131,14 +131,19 @@ function Section2() {
           이번 작업을 진행하며 막혔었던 부분 중에서 2가지가 기억이나서 아래에 정리해보았습니다.<br /><br />
           1. 렌더 시 fade-in-out 효과 시 화면 깜빡임 현상으로 인한 불편한 사용자 경험<br /><br />
           2. img들의 느린 렌더링으로 인한 불편한 사용자 경험<br /><br /><br />
-          1번째 문제를 해결한 방법은 useEffect가 아닌 useLayoutEffect를 사용한 방법입니다.<br /><br />
-          useEffect의 이펙트는 DOM이 화면에 그려진 이후에 호출이 됩니다.<br /><br />
-          허나 useLayoutEffect의 이펙트는 DOM이 화면에 그려지기 전에 호출됩니다.<br /><br />
+          <hr />
+          1번째 문제를 해결한 방법<br /><br />
+          useEffect가 아닌 useLayoutEffect를 사용한 방법입니다.<br /><br />
+          useEffect의 이펙트는 render 와 paint 된 후 실행됩니다.<br /><br />
+          useLayoutEffect의 이펙트는  render 된 후 실행되며, 그 이후에 paint가 됩니다.<br /><br />
+          즉 useLayoutEffect를 사용할 시 마지막에 paint가 되기 때문에 화면 깜빡임이 해결됩니다.<br /><br />
           공식 문서에선 useEffect의 사용만을 선호하고 있지만 useEffect에 dom에 영향을 주는 코드가 있을 경우 useLayoutEffect를 사용해야 특정 dom 렌더 시 깜빡임 현상이 해결된다는 것을 알았습니다.<br /><br /><br />
-          2번째 문제를 해결한 방법은 public 폴더가 아닌 asset 폴더에 img를 넣은 방법입니다.<br /><br />
+          <hr />
+          2번째 문제를 해결한 방법<br /><br /> public 폴더가 아닌 asset 폴더에 img를 넣은 방법입니다.<br /><br />
           이 경우는 컴파일 시에 필요한 파일인지 아닌지에 따라 달라졌습니다.<br /><br />
           파비콘과 같은 index.html 내부에서 직접 사용하여 컴파일 단계가 필요 없는 파일들은 public 파일에 저장하고 컴포넌트 내부에서 사용해야 하는 이미지 파일 같은 경우는 asset 폴더에 위치시켰습니다.<br /><br /><br />
-          오류가 나면서 나아갈 길이 막힌다는 건 달갑지 않은 일이지만<br />
+          <hr />
+          오류가 나면서 나아갈 길이 막힌다는 건 달갑지 않은 일이지만<br /><br />
           그 문제를 해결해나간 경험들이 곧 개발해 나가며 필요한 열쇠 꾸러미가 된다고 생각합니다.
         </InText>
       </Paper>
