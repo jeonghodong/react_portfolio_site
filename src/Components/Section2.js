@@ -10,6 +10,7 @@ import snsImg4 from "../asset/sns_댓글작성삭제.gif"
 import snsImg5 from "../asset/sns_좋아요팔로우취소등록.gif"
 import snsImg6 from "../asset/sns_무한스크롤상단이동.gif"
 import snsImg7 from "../asset/sns_page이동.gif"
+import snsImg8 from "../asset/sns_미디어쿼리.gif"
 import BackClickButton from "./BackClickButton";
 import closeBg from "../Functions/closeBg";
 
@@ -161,6 +162,8 @@ function Section2() {
         <Line />
         <H2>SideBar에서 Page이동 ( MainFeed & Profile )</H2>
         <MovieImg src={snsImg7} alt="ChartImg" />
+        <H2>Media Query</H2>
+        <MovieImg src={snsImg8} alt="ChartImg" />
         {/*  */}
         <GoLink href="https://jeonghodong.tistory.com/entry/%EA%B0%99%EC%9D%B4%EC%9D%98-%EA%B0%80%EC%B9%98-%EC%B2%AB-%ED%8C%80-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8" target="_blank" rel="noreferrer" >
           첫 팀 프로젝트 블로그 정리 글</GoLink>
