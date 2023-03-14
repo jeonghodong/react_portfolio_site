@@ -17,7 +17,7 @@ const TitleName = styled.h1`
 
 const Wrap = styled.div`
   @media ${(props) => props.theme.tablet} {
-    & ${TitleName} {
+    ${TitleName} {
       text-align: center;
       margin-right: 0;
     }

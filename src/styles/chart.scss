@@ -36,10 +36,8 @@
     justify-content: center;
     flex-direction: column;
     &_bar {
-      width: 100vw;
-      padding: 0.8rem;
-      border-radius: 20px;
-      box-shadow: inset 0px 0px 17px -11px #000000;
+      display: none;
+      visibility: hidden;
     }
     &_box {
       margin: 0;

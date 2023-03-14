@@ -22,6 +22,10 @@ const rotate2 = keyframes`
 
 const BackButton = styled.i`
   @media ${(props) => props.theme.mobile} {
+      display:none;
+  }
+  @media ${(props) => props.theme.tablet} {
+      display:none;
   }
   position: absolute;
   top: 0;

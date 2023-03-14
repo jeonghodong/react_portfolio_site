@@ -1,22 +1,15 @@
 import { useLayoutEffect, useRef } from "react";
-import styled from "styled-components";
+import styled, { ThemeProvider } from "styled-components";
 import { useNavigate } from "react-router-dom";
 import openBg from "../Functions/openBg";
 import movieImg from "../asset/무비_home.png"
 import movieImg2 from "../asset/무비_클릭시_예고편.png"
 import BackClickButton from "./BackClickButton";
 import closeBg from "../Functions/closeBg";
+import theme from "../styles/theme";
 
 
-const Wrap = styled.div`
-    background-color:#101e2678;
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
-    top: 0px;
-    left: 0px;
-    overflow-y: auto;
-`;
+
 
 const Paper = styled.div`
     background-color:white;
@@ -60,8 +53,34 @@ const SkillText = styled.span`
   }
 `;
 
+const Wrap = styled.div`
+    background-color:#101e2678;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0px;
+    left: 0px;
+    overflow-y: auto;
+      @media ${(props) => props.theme.tablet} {
+    ${SkillBox} {
+      display:flex;
+      flex-direction: column;
+    }
+    ${SkillText}{
+      font-size: 1vw;
+      width:50%;
+      margin-bottom:1rem;
+      padding: 0.3rem;
+      &:nth-last-child(){
+        margin:0;
+      }
+    }
+  }
+`;
+
 const GoLink = styled.a`
   color:#101e2678 !important ;
+  font-size:1vw;
 `;
 
 function Section1() {
@@ -109,29 +128,31 @@ function Section1() {
   };
 
   return (
-    <Wrap ref={WrapBg} >
-      <BackClickButton onClick={onClick} />
-      <Paper ref={bg}>
-        <TitleText>REACT MOVIE APP</TitleText>
-        <SkillBox>
-          <SkillText>React</SkillText>
-          <SkillText>Scss/Sass</SkillText>
-          <SkillText>Css Module (Css in Css)</SkillText>
-          <SkillText>CRA</SkillText>
-        </SkillBox>
-        <MovieImg src={movieImg} alt="movieImg" />
-        <InText>안녕하세요. 정호동입니다.<br /><br />
-          이 프로젝트는 처음 React를 공부하고 프로젝트를 진행할 때 정말 많이 도움이 되었던 프로젝트입니다.<br /><br />
-          이 앱은 개인 프로젝트이며 오픈 API를 활용한 React 영화 앱이고 카테고리 별로 이동이 가능하며 피드는 최신순으로 나열이 됩니다.<br />
-        </InText >
-        <MovieImg src={movieImg2} alt="movieImg" />
-        <InText>특정한 영화를 클릭할 시 해당 영화의 예고편을 볼 수 있는 페이지로 이동합니다.</InText>
-        <InText>반응형 작업은 아직 진행이 안되었습니다.<br /></InText>
-        {/*  */}
-        <GoLink href="https://jeonghodong.github.io/react_movie_app/" target="_blank" rel="noreferrer" >
-          https://jeonghodong.github.io/react_movie_app/</GoLink>
-      </Paper >
-    </Wrap >
+    <ThemeProvider theme={theme}>
+      <Wrap ref={WrapBg} >
+        <BackClickButton onClick={onClick} />
+        <Paper ref={bg}>
+          <TitleText>REACT MOVIE APP</TitleText>
+          <SkillBox>
+            <SkillText>React</SkillText>
+            <SkillText>Scss/Sass</SkillText>
+            <SkillText>Css Module (Css in Css)</SkillText>
+            <SkillText>CRA</SkillText>
+          </SkillBox>
+          <MovieImg src={movieImg} alt="movieImg" />
+          <InText>안녕하세요. 정호동입니다.<br /><br />
+            이 프로젝트는 처음 React를 공부하고 프로젝트를 진행할 때 정말 많이 도움이 되었던 프로젝트입니다.<br /><br />
+            이 앱은 개인 프로젝트이며 오픈 API를 활용한 React 영화 앱이고 카테고리 별로 이동이 가능하며 피드는 최신순으로 나열이 됩니다.<br />
+          </InText >
+          <MovieImg src={movieImg2} alt="movieImg" />
+          <InText>특정한 영화를 클릭할 시 해당 영화의 예고편을 볼 수 있는 페이지로 이동합니다.</InText>
+          <InText>반응형 작업은 아직 진행이 안되었습니다.<br /></InText>
+          {/*  */}
+          <GoLink href="https://jeonghodong.github.io/react_movie_app/" target="_blank" rel="noreferrer" >
+            https://jeonghodong.github.io/react_movie_app/</GoLink>
+        </Paper >
+      </Wrap >
+    </ThemeProvider>
   );
 }
 

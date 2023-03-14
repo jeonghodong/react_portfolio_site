@@ -1,7 +1,9 @@
 /* eslint-disable import/no-unresolved */
 import { useLayoutEffect, useRef } from "react";
-import styled from "styled-components";
+import styled, { ThemeProvider } from "styled-components";
 import { useNavigate } from "react-router-dom";
+import theme from "../styles/theme";
+
 import openBg from "../Functions/openBg";
 import snsImg1 from "../asset/sns_page진입.gif"
 import snsImg2 from "../asset/sns_게시물작성.gif"
@@ -13,17 +15,6 @@ import snsImg7 from "../asset/sns_page이동.gif"
 import snsImg8 from "../asset/sns_미디어쿼리.gif"
 import BackClickButton from "./BackClickButton";
 import closeBg from "../Functions/closeBg";
-
-
-const Wrap = styled.div`
-    background-color:#00ff6fbd;
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
-    top: 0px;
-    left: 0px;
-    overflow-y: auto;
-`;
 
 const Paper = styled.div`
     background-color:white;
@@ -68,6 +59,7 @@ const SkillText = styled.span`
 
 const GoLink = styled.a`
   color:#00ff6fbd !important ;
+  font-size:1vw;
 `;
 
 const H2 = styled.span`
@@ -77,6 +69,31 @@ const H2 = styled.span`
 
 const Line = styled.hr`
   margin:2rem 0 2rem 0;
+`;
+
+const Wrap = styled.div`
+    background-color:#00ff6fbd;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0px;
+    left: 0px;
+    overflow-y: auto;
+          @media ${(props) => props.theme.tablet} {
+    ${SkillBox} {
+      display:flex;
+      flex-direction: column;
+    }
+    ${SkillText}{
+      font-size: 1vw;
+      width:50%;
+      margin-bottom:1rem;
+      padding: 0.3rem;
+      &:nth-last-child(){
+        margin:0;
+      }
+    }
+  }
 `;
 
 function Section2() {
@@ -124,52 +141,54 @@ function Section2() {
   };
 
   return (
-    <Wrap ref={WrapBg}>
-      <BackClickButton onClick={onClick} />
-      <Paper ref={bg}>
-        <TitleText>SNS Team Project</TitleText>
-        <SkillBox>
-          <SkillText>React</SkillText>
-          <SkillText>기본 CSS</SkillText>
-          <SkillText>Media Query</SkillText>
-          <SkillText>Axios</SkillText>
-          <SkillText>Redux Toolkit</SkillText>
-          <SkillText>Vite</SkillText>
-        </SkillBox>
-        <InText>
-          안녕하세요. 정호동입니다.<br /><br />
-          이 작업물은 총인원 5명 프런트엔드 3명 백엔드 1명 DB1명에서 진행한 제 첫 팀 프로젝트입니다. 제가 속한 곳은 프론트엔드입니다.<br /><br />
-          제 역할은 MainFeed 전체 작업을 하였고 진행하다 보니 전체 세부 기능 부분 및 & 로그인 Axios 처리 & react-router-dom 등등 다양한 부분도 맡아서 하게 되었고 말한 거 외에도 배워간 것이 많았던 좋은 경험의 팀 프로젝트였습니다.<br /><br />
-          아래는 간략하게 제가 담당했던 파트 중 눈에 보이는 부분들로 보기 좋게 정리하였습니다.
+    <ThemeProvider theme={theme}>
+      <Wrap ref={WrapBg}>
+        <BackClickButton onClick={onClick} />
+        <Paper ref={bg}>
+          <TitleText>SNS Team Project</TitleText>
+          <SkillBox>
+            <SkillText>React</SkillText>
+            <SkillText>기본 CSS</SkillText>
+            <SkillText>Media Query</SkillText>
+            <SkillText>Axios</SkillText>
+            <SkillText>Redux Toolkit</SkillText>
+            <SkillText>Vite</SkillText>
+          </SkillBox>
+          <InText>
+            안녕하세요. 정호동입니다.<br /><br />
+            이 작업물은 총인원 5명 프런트엔드 3명 백엔드 1명 DB1명에서 진행한 제 첫 팀 프로젝트입니다. 제가 속한 곳은 프론트엔드입니다.<br /><br />
+            제 역할은 MainFeed 전체 작업을 하였고 진행하다 보니 전체 세부 기능 부분 및 & 로그인 Axios 처리 & react-router-dom 등등 다양한 부분도 맡아서 하게 되었고 말한 거 외에도 배워간 것이 많았던 좋은 경험의 팀 프로젝트였습니다.<br /><br />
+            아래는 간략하게 제가 담당했던 파트 중 눈에 보이는 부분들로 보기 좋게 정리하였습니다.
+            <Line />
+          </InText>
+          <H2>로그인 후 MainFeed(Home) Page 진입</H2>
+          <MovieImg src={snsImg1} alt="ChartImg" />
           <Line />
-        </InText>
-        <H2>로그인 후 MainFeed(Home) Page 진입</H2>
-        <MovieImg src={snsImg1} alt="ChartImg" />
-        <Line />
-        <H2>게시물 작성</H2>
-        <MovieImg src={snsImg2} alt="ChartImg" />
-        <Line />
-        <H2>게시물 삭제</H2>
-        <MovieImg src={snsImg3} alt="ChartImg" />
-        <Line />
-        <H2>댓글 작성 & 댓글 삭제</H2>
-        <MovieImg src={snsImg4} alt="ChartImg" />
-        <Line />
-        <H2>좋아요 하기 & 좋아요 취소 & 팔로우 하기 & 팔로우 취소</H2>
-        <MovieImg src={snsImg5} alt="ChartImg" />
-        <Line />
-        <H2>스크롤 시 다음 MainFeed GET & 최상단 이동 버튼</H2>
-        <MovieImg src={snsImg6} alt="ChartImg" />
-        <Line />
-        <H2>SideBar에서 Page이동 ( MainFeed & Profile )</H2>
-        <MovieImg src={snsImg7} alt="ChartImg" />
-        <H2>Media Query</H2>
-        <MovieImg src={snsImg8} alt="ChartImg" />
-        {/*  */}
-        <GoLink href="https://jeonghodong.tistory.com/entry/%EA%B0%99%EC%9D%B4%EC%9D%98-%EA%B0%80%EC%B9%98-%EC%B2%AB-%ED%8C%80-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8" target="_blank" rel="noreferrer" >
-          첫 팀 프로젝트 블로그 정리 글</GoLink>
-      </Paper>
-    </Wrap>
+          <H2>게시물 작성</H2>
+          <MovieImg src={snsImg2} alt="ChartImg" />
+          <Line />
+          <H2>게시물 삭제</H2>
+          <MovieImg src={snsImg3} alt="ChartImg" />
+          <Line />
+          <H2>댓글 작성 & 댓글 삭제</H2>
+          <MovieImg src={snsImg4} alt="ChartImg" />
+          <Line />
+          <H2>좋아요 하기 & 좋아요 취소 & 팔로우 하기 & 팔로우 취소</H2>
+          <MovieImg src={snsImg5} alt="ChartImg" />
+          <Line />
+          <H2>스크롤 시 다음 MainFeed GET & 최상단 이동 버튼</H2>
+          <MovieImg src={snsImg6} alt="ChartImg" />
+          <Line />
+          <H2>SideBar에서 Page이동 ( MainFeed & Profile )</H2>
+          <MovieImg src={snsImg7} alt="ChartImg" />
+          <H2>Media Query</H2>
+          <MovieImg src={snsImg8} alt="ChartImg" />
+          {/*  */}
+          <GoLink href="https://jeonghodong.tistory.com/entry/%EA%B0%99%EC%9D%B4%EC%9D%98-%EA%B0%80%EC%B9%98-%EC%B2%AB-%ED%8C%80-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8" target="_blank" rel="noreferrer" >
+            첫 팀 프로젝트 블로그 정리 글</GoLink>
+        </Paper>
+      </Wrap>
+    </ThemeProvider>
   );
 }
 

@@ -1,6 +1,7 @@
 import { useLayoutEffect, useRef } from "react";
-import styled from "styled-components";
+import styled, { ThemeProvider } from "styled-components";
 import { useNavigate } from "react-router-dom";
+import theme from "../styles/theme";
 import openBg from "../Functions/openBg";
 import photoImg from "../asset/photo_home.png"
 import photoImg1 from "../asset/photo_section.png"
@@ -8,16 +9,6 @@ import photoImg2 from "../asset/photo_section2.png"
 import BackClickButton from "./BackClickButton";
 import closeBg from "../Functions/closeBg";
 
-
-const Wrap = styled.div`
-    background-color:#8c6f00a8;
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
-    top: 0px;
-    left: 0px;
-    overflow-y: auto;
-`;
 
 const Paper = styled.div`
     background-color:white;
@@ -63,8 +54,32 @@ const SkillText = styled.span`
 
 const GoLink = styled.a`
   color:#8c6f00a8 !important ;
+    font-size:1vw;
 `;
-
+const Wrap = styled.div`
+    background-color:#8c6f00a8;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0px;
+    left: 0px;
+    overflow-y: auto;
+                  @media ${(props) => props.theme.tablet} {
+    ${SkillBox} {
+      display:flex;
+      flex-direction: column;
+    }
+    ${SkillText}{
+      font-size: 1vw;
+      width:50%;
+      margin-bottom:1rem;
+      padding: 0.3rem;
+      &:nth-last-child(){
+        margin:0;
+      }
+    }
+  }
+`;
 function Section4() {
   const bg = useRef();
   const WrapBg = useRef();
@@ -109,32 +124,34 @@ function Section4() {
   };
 
   return (
-    <Wrap ref={WrapBg}>
-      <BackClickButton onClick={onClick} />
-      <Paper ref={bg}>
-        <TitleText>Photography Site</TitleText>
-        <SkillBox>
-          <SkillText>HTML</SkillText>
-          <SkillText>CSS</SkillText>
-          <SkillText>Javascript</SkillText>
-          <SkillText>Media Query</SkillText>
-        </SkillBox>
-        <MovieImg src={photoImg} alt="ChartImg" />
-        <InText>
-          안녕하세요. 정호동입니다.<br /><br />
-          HTML, CSS, JS를 공부할 때 Figma 자료들을 이용을 많이 하였습니다.<br /><br />
-          그때 기본적인 HTML, CSS를 익히는데 큰 도움이 많이 되었고 이 Photography Site는 그중 하나입니다.</InText>
-        <MovieImg src={photoImg1} alt="ChartImg" />
-        <InText>
-          Figma 자료들을 클론 하며 배워갔던 것들 중 가장 큰 배움은 CSS의 레이아웃 배치의 이해였습니다.<br /><br />
-          float, flex, grid, position의 사용에 큰 배움을 얻었습니다.
-        </InText>
-        <MovieImg src={photoImg2} alt="ChartImg" />
-        {/*  */}
-        <GoLink href="https://jeonghodong.github.io/photography_site_figma_clone/" target="_blank" rel="noreferrer" >
-          https://jeonghodong.github.io/photography_site_figma_clone/</GoLink>
-      </Paper>
-    </Wrap>
+    <ThemeProvider theme={theme}>
+      <Wrap Wrap ref={WrapBg} >
+        <BackClickButton onClick={onClick} />
+        <Paper ref={bg}>
+          <TitleText>Photography Site</TitleText>
+          <SkillBox>
+            <SkillText>HTML</SkillText>
+            <SkillText>CSS</SkillText>
+            <SkillText>Javascript</SkillText>
+            <SkillText>Media Query</SkillText>
+          </SkillBox>
+          <MovieImg src={photoImg} alt="ChartImg" />
+          <InText>
+            안녕하세요. 정호동입니다.<br /><br />
+            HTML, CSS, JS를 공부할 때 Figma 자료들을 이용을 많이 하였습니다.<br /><br />
+            그때 기본적인 HTML, CSS를 익히는데 큰 도움이 많이 되었고 이 Photography Site는 그중 하나입니다.</InText>
+          <MovieImg src={photoImg1} alt="ChartImg" />
+          <InText>
+            Figma 자료들을 클론 하며 배워갔던 것들 중 가장 큰 배움은 CSS의 레이아웃 배치의 이해였습니다.<br /><br />
+            float, flex, grid, position의 사용에 큰 배움을 얻었습니다.
+          </InText>
+          <MovieImg src={photoImg2} alt="ChartImg" />
+          {/*  */}
+          <GoLink href="https://jeonghodong.github.io/photography_site_figma_clone/" target="_blank" rel="noreferrer" >
+            https://jeonghodong.github.io/photography_site_figma_clone/</GoLink>
+        </Paper>
+      </Wrap >
+    </ThemeProvider  >
   );
 }
 

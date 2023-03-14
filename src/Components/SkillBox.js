@@ -56,14 +56,14 @@ const SkillBox = forwardRef((_, skill) => {
         label: "Skill",
         data: [80, 40, 60, 80, 70, 80, 75, 65, 100],
         backgroundColor: [
-          "rgb(255, 99, 132)",
-          "rgb(75, 192, 192)",
-          "rgb(255, 205, 86)",
-          "rgb(201, 203, 207)",
-          "rgb(54, 162, 235)",
+          "#F23558",
+          "#723FA6",
+          "#0487D9",
+          "#03A65A",
+          "#F25835",
           "rgb(154, 162, 235)",
           "rgb(54, 102, 235)",
-          "rgb(254, 162, 235)",
+          "rgb(254, 152, 235)",
         ],
       },
     ],
@@ -79,7 +79,7 @@ const SkillBox = forwardRef((_, skill) => {
       label: 'Skill',
       data: [80, 20],
       backgroundColor: [
-        'rgb(255, 99, 132)',
+        '#4284f3',
         '#f2f2f2',
       ],
       hoverOffset: 4
@@ -94,7 +94,7 @@ const SkillBox = forwardRef((_, skill) => {
       label: 'Skill',
       data: [85, 15],
       backgroundColor: [
-        'rgb(155, 99, 132)',
+        '#ea4335',
         '#f2f2f2',
       ],
       hoverOffset: 4
@@ -109,7 +109,7 @@ const SkillBox = forwardRef((_, skill) => {
       label: 'Skill',
       data: [60, 40],
       backgroundColor: [
-        'rgb(255, 99, 32)',
+        '#fabc05',
         '#f2f2f2',
       ],
       hoverOffset: 4
