@@ -7,11 +7,13 @@ import movieImg2 from "../asset/무비_클릭시_예고편.png"
 import BackClickButton from "./BackClickButton";
 import closeBg from "../Functions/closeBg";
 import theme from "../styles/theme";
+import LinkArrow from "./LinkArrow";
 
 
 
 
 const Paper = styled.div`
+    position:relative;
     background-color:white;
     width: 100vh;
     max-width: 100%;
@@ -150,6 +152,7 @@ function Section1() {
           {/*  */}
           <GoLink href="https://jeonghodong.github.io/react_movie_app/" target="_blank" rel="noreferrer" >
             https://jeonghodong.github.io/react_movie_app/</GoLink>
+          <LinkArrow />
         </Paper >
       </Wrap >
     </ThemeProvider>

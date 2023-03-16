@@ -8,6 +8,7 @@ import photoImg1 from "../asset/photo_section.png"
 import photoImg2 from "../asset/photo_section2.png"
 import BackClickButton from "./BackClickButton";
 import closeBg from "../Functions/closeBg";
+import LinkArrow from "./LinkArrow";
 
 
 const Paper = styled.div`
@@ -17,6 +18,7 @@ const Paper = styled.div`
     padding: 2rem;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 12px;
     margin: 2rem auto;
+    position:relative;
 `;
 const TitleText = styled.h1`
   font-size:5rem;
@@ -147,6 +149,7 @@ function Section4() {
           </InText>
           <MovieImg src={photoImg2} alt="ChartImg" />
           {/*  */}
+          <LinkArrow />
           <GoLink href="https://jeonghodong.github.io/photography_site_figma_clone/" target="_blank" rel="noreferrer" >
             https://jeonghodong.github.io/photography_site_figma_clone/</GoLink>
         </Paper>

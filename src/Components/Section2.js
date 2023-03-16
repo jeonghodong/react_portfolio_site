@@ -15,6 +15,7 @@ import snsImg7 from "../asset/sns_page이동.gif"
 import snsImg8 from "../asset/sns_미디어쿼리.gif"
 import BackClickButton from "./BackClickButton";
 import closeBg from "../Functions/closeBg";
+import LinkArrow from "./LinkArrow";
 
 const Paper = styled.div`
     background-color:white;
@@ -23,6 +24,7 @@ const Paper = styled.div`
     padding: 2rem;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 12px;
     margin: 2rem auto;
+    position:relative;
 `;
 const TitleText = styled.h1`
   font-size:5rem;
@@ -184,6 +186,7 @@ function Section2() {
           <H2>Media Query</H2>
           <MovieImg src={snsImg8} alt="ChartImg" />
           {/*  */}
+          <LinkArrow />
           <GoLink href="https://jeonghodong.tistory.com/entry/%EA%B0%99%EC%9D%B4%EC%9D%98-%EA%B0%80%EC%B9%98-%EC%B2%AB-%ED%8C%80-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8" target="_blank" rel="noreferrer" >
             첫 팀 프로젝트 블로그 정리 글</GoLink>
         </Paper>
