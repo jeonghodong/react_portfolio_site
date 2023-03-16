@@ -24,7 +24,7 @@ const Line = styled.div`
 const Cover = styled.p`
   padding: 50px 0 20px 0;
   font-size: 1vw;
-  font-weight: 400;
+  font-weight: 500;
 `;
 const Name = styled.p`
   font-size: 1.5vw;

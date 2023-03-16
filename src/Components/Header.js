@@ -13,6 +13,7 @@ const Button = styled.button`
   border: none;
   background: inherit;
   font-size: 1vw;
+  font-weight: 900;
 `;
 
 const Logo = styled.h1`

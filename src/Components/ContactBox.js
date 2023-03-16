@@ -18,9 +18,9 @@ const TitleText = styled.h2`
   text-align: center;
   margin-bottom: 5rem;
 `;
-
-const ContactUl = styled.ul``;
-const ContactLi = styled.ul``;
+const ContactLi = styled.span`
+margin-bottom:1rem;
+`;
 const Wrap = styled.div`
   @media ${(props) => props.theme.mobile} {
     ${TitleText} {
@@ -44,7 +44,7 @@ const Wrap = styled.div`
   justify-items: center;
   padding: 4rem 4rem;
   margin-top: 5rem;
-  background-color: rgb(240 240 240);
+  background-color: rgb(255 255 255);
   font-family: "Poppins", sans-serif;
 `;
 const FooterLine = styled.div`
@@ -53,9 +53,10 @@ const FooterLine = styled.div`
     border-radius: 0;
     height: 50px;
     font-size: 10px;
+    margin-bottom: 1.5rem;
   }
   background-color: #5353c2;
-  width: 99vw;
+  width: 97vw;
   border-radius: 1rem;
   margin: 0 auto;
   height: 80px;
@@ -73,12 +74,10 @@ const ContactBox = forwardRef((_, contact) => {
       <Wrap ref={contact}>
         <TitleText>Contact Channel</TitleText>
         {ContactData.map((v) => (
-          <ContactUl key={v.id}>
-            <ContactLi>
-              <Icon>{v.icon}</Icon>
-              <Text>{v.value}</Text>
-            </ContactLi>
-          </ContactUl>
+          <ContactLi key={v.id}>
+            <Icon>{v.icon}</Icon>
+            <Text>{v.value}</Text>
+          </ContactLi>
         ))}
       </Wrap>
       <FooterLine>2023 Copyright Hodong All right reserved.</FooterLine>
