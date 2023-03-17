@@ -36,8 +36,7 @@
     justify-content: center;
     flex-direction: column;
     &_bar {
-      display: none;
-      visibility: hidden;
+      width: 98% !important;
     }
     &_box {
       margin: 0;
