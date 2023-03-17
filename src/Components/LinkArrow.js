@@ -32,9 +32,6 @@ const inOut2 = keyframes`
       color:white;
 }
 `;
-const Wrap = styled.div`
-  display:flex;
-`;
 const Arrow = styled.i`
   color:black;
   position:absolute;
@@ -49,8 +46,16 @@ const Text = styled.i`
   font-size:1.2rem;
   bottom:32px;
   animation: ${inOut2} 1.5s ease-in-out infinite;
+  
 `;
-
+const Wrap = styled.div`
+  display:flex;
+  @media ${(props) => props.theme.desktop} {
+    ${Text} {
+      display:none;
+    }
+  }
+`;
 function LinkArrow() {
   return (
     <Wrap>

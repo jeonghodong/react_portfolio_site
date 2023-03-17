@@ -17,7 +17,8 @@ const upDown = keyframes`
 
 const TopButton = styled.i`
   @media ${(props) => props.theme.mobile} {
-    display: none;
+    font-size:1.5rem;
+    left: 88vw;
   }
   color: #0000c5;
   position: sticky;

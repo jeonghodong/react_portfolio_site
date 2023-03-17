@@ -67,7 +67,7 @@ const Wrap = styled.div`
       flex-direction: column;
     }
     ${SkillText}{
-      font-size: 1vw;
+      font-size: 2.5vw;
       width:50%;
       margin-bottom:1rem;
       padding: 0.3rem;

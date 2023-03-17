@@ -21,28 +21,36 @@ const rotate2 = keyframes`
 }`;
 
 const BackButton = styled.i`
-  @media ${(props) => props.theme.mobile} {
-      display:none;
-  }
-  @media ${(props) => props.theme.tablet} {
-      display:none;
-  }
+  /* @media ${(props) => props.theme.desktop} {
+    &{
+  z-index:1000;
   position: absolute;
   top: 0;
   right: 0;
   font-size: 2.3vw;
   margin: 2rem 3rem 0rem 0rem;
-  color:white;
-  opacity:50%;
+  color:black;
+  opacity:100%;
+  cursor: pointer;
+  }
+  } */
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 2.3vw;
+  margin: 2rem 2rem 0rem 0rem;
+  opacity:40%;
+  color:black;
   cursor: pointer;
   animation: ${rotate} 3s ease-in-out infinite;
   &:hover {
     transition: 0.5s;
     font-size: 3.5vw;
     right: -10px;
+    opacity:100%;
     animation: ${rotate2} 0.5s ease;
     animation-fill-mode: forwards;
-    opacity:100%;
+    
   }
   &:not(:hover) {
     transition: 0.5s ease-out;
@@ -52,13 +60,12 @@ const BackButton = styled.i`
 
 function BackClickButton({ onClick }) {
   const button = useRef();
-  // const back = useNavigate();
   useEffect(() => {
     button.current.animate(
       [
         // keyframes
         { opacity: "0" },
-        { opacity: "1" },
+        { opacity: "0.4" },
       ],
       {
         // timing options
@@ -67,10 +74,6 @@ function BackClickButton({ onClick }) {
       }
     );
   }, []);
-
-  // const onClick = () => {
-  //   back("/About#port");
-  // };
 
   return (
     <ThemeProvider theme={theme}>

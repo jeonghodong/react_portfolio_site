@@ -13,7 +13,7 @@ import LinkArrow from "./LinkArrow";
 
 
 const Paper = styled.div`
-    position:relative;
+    position: relative;
     background-color:white;
     width: 100vh;
     max-width: 100%;
@@ -69,7 +69,7 @@ const Wrap = styled.div`
       flex-direction: column;
     }
     ${SkillText}{
-      font-size: 1vw;
+      font-size: 2.5vw;
       width:50%;
       margin-bottom:1rem;
       padding: 0.3rem;
@@ -132,8 +132,8 @@ function Section1() {
   return (
     <ThemeProvider theme={theme}>
       <Wrap ref={WrapBg} >
-        <BackClickButton onClick={onClick} />
         <Paper ref={bg}>
+          <BackClickButton onClick={onClick} />
           <TitleText>REACT MOVIE APP</TitleText>
           <SkillBox>
             <SkillText>React</SkillText>
