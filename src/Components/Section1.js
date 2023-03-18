@@ -65,10 +65,12 @@ const Wrap = styled.div`
     overflow-y: auto;
       @media ${(props) => props.theme.tablet} {
     ${SkillBox} {
+      
       display:flex;
       flex-direction: column;
     }
     ${SkillText}{
+      border:1px solid black;
       font-size: 2.5vw;
       width:50%;
       margin-bottom:1rem;

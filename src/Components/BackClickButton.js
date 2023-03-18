@@ -21,24 +21,11 @@ const rotate2 = keyframes`
 }`;
 
 const BackButton = styled.i`
-  /* @media ${(props) => props.theme.desktop} {
-    &{
-  z-index:1000;
   position: absolute;
   top: 0;
   right: 0;
   font-size: 2.3vw;
-  margin: 2rem 3rem 0rem 0rem;
-  color:black;
-  opacity:100%;
-  cursor: pointer;
-  }
-  } */
-  position: absolute;
-  top: 0;
-  right: 0;
-  font-size: 2.3vw;
-  margin: 2rem 2rem 0rem 0rem;
+  margin: 1.5rem 1.5rem 0rem 0rem;
   opacity:40%;
   color:black;
   cursor: pointer;
