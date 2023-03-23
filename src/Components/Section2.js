@@ -18,13 +18,13 @@ import closeBg from "../Functions/closeBg";
 import LinkArrow from "./LinkArrow";
 
 const Paper = styled.div`
+    position:relative;
     background-color:white;
     width: 100vh;
     max-width: 100%;
     padding: 2rem;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 12px;
     margin: 2rem auto;
-    position:relative;
 `;
 const TitleText = styled.h1`
   font-size:5rem;
@@ -146,8 +146,8 @@ function Section2() {
   return (
     <ThemeProvider theme={theme}>
       <Wrap ref={WrapBg}>
-        <BackClickButton onClick={onClick} />
         <Paper ref={bg}>
+          <BackClickButton onClick={onClick} />
           <TitleText>SNS Team Project</TitleText>
           <SkillBox>
             <SkillText>React</SkillText>

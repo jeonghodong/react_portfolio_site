@@ -12,6 +12,7 @@ import closeBg from "../Functions/closeBg";
 
 
 const Paper = styled.div`
+    position:relative;
     background-color:white;
     width: 100vh;
     max-width: 100%;
@@ -125,8 +126,8 @@ function Section2() {
   return (
     <ThemeProvider theme={theme}>
       <Wrap ref={WrapBg}>
-        <BackClickButton onClick={onClick} />
         <Paper ref={bg}>
+          <BackClickButton onClick={onClick} />
           <TitleText>This Portfolio</TitleText>
           <SkillBox>
             <SkillText>React</SkillText>

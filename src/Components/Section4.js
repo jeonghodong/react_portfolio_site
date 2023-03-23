@@ -129,8 +129,8 @@ function Section4() {
   return (
     <ThemeProvider theme={theme}>
       <Wrap Wrap ref={WrapBg} >
-        <BackClickButton onClick={onClick} />
         <Paper ref={bg}>
+          <BackClickButton onClick={onClick} />
           <TitleText>Photography Site</TitleText>
           <SkillBox>
             <SkillText>HTML</SkillText>

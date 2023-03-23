@@ -10,8 +10,6 @@ import theme from "../styles/theme";
 import LinkArrow from "./LinkArrow";
 
 
-
-
 const Paper = styled.div`
     position: relative;
     background-color:white;
