@@ -6,6 +6,7 @@ import SNSImg from "../asset/sns_home.png"
 import portImg from "../asset/portfolio.png"
 import photoImg from "../asset/photo_home.png"
 import movieImg from "../asset/무비_home.png"
+import mallImg from "../asset/Mall3.png"
 
 const TitleText = styled.h2`
   font-size: 2.5vw;
@@ -71,6 +72,10 @@ const Bg2 = styled(Bg)`
 const Bg3 = styled(Bg)`
   background-color: #8c6f00;
 `;
+const Bg4 = styled(Bg)`
+  background-color: #ececec;
+  color:black;
+`;
 const Wrap = styled.div`
   @media ${(props) => props.theme.mobile} {
     flex-direction: column;
@@ -102,7 +107,11 @@ const PortfolioBox = forwardRef(({ onClick }, folio) => {
           </Section>
           <Section onClick={() => onClick(4, true)}>
             <Bg3>Photography</Bg3>
-            <Img src={photoImg} alt="portfolio" />
+            <Img src={photoImg} alt="photography" />
+          </Section>
+          <Section onClick={() => onClick(5, true)}>
+            <Bg4>Cat Shopping Mall</Bg4>
+            <Img src={mallImg} alt="shopping_mall" />
           </Section>
         </SectionWrap>
       </Wrap>

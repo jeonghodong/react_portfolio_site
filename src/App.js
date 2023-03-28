@@ -10,6 +10,8 @@ import PortfolioAbout from "./Routers/PortfolioAbout";
 import PhotographySection from "./Routers/PhotographySection";
 import PhotographyAbout from "./Routers/PhotographyAbout ";
 import Intro from "./Routers/Intro";
+import MallSection from "./Routers/MallSection";
+import MallAbout from "./Routers/MallAbout";
 
 const Wrap = styled.div`
   margin: 0 auto;
@@ -32,6 +34,8 @@ function App() {
           <Route path="/PortfolioAbout" element={<PortfolioAbout />} />
           <Route path="/Photography" element={<PhotographySection />} />
           <Route path="/PhotographyAbout" element={<PhotographyAbout />} />
+          <Route path="/Mall" element={<MallSection />} />
+          <Route path="/MallAbout" element={<MallAbout />} />
         </Routes>
       </Router>
     </Wrap>

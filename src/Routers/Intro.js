@@ -108,6 +108,11 @@ function Intro() {
           navigate("/PhotographyAbout");
         }, 450);
       }
+      if (ref === 5) {
+        setTimeout(() => {
+          navigate("/MallAbout");
+        }, 450);
+      }
     }
   };
   // Top으로 이동

@@ -148,7 +148,7 @@ function Section1() {
           </InText >
           <MovieImg src={movieImg2} alt="movieImg" />
           <InText>특정한 영화를 클릭할 시 해당 영화의 예고편을 볼 수 있는 페이지로 이동합니다.</InText>
-          <InText>반응형 작업은 아직 진행이 안되었습니다.<br /></InText>
+          <InText>반응형 작업은 진행 안되었습니다.<br /></InText>
           {/*  */}
           <GoLink href="https://jeonghodong.github.io/react_movie_app/" target="_blank" rel="noreferrer" >
             https://jeonghodong.github.io/react_movie_app/</GoLink>
