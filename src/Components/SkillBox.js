@@ -49,12 +49,12 @@ const SkillBox = forwardRef((_, skill) => {
 
   // BarData
   const BarData = {
-    labels: ["React", "Redux", "Styled Component", "Scss / Sass", "CSS module", "Media Query", "Postman", "Git"],
+    labels: ["React", "Redux", "Styled Component", "Sass(Scss)", "CSS module", "Media Query", "Postman", "Firebase", "Git"],
     datasets: [
       {
         type: "bar",
         label: "Skill",
-        data: [80, 40, 60, 80, 70, 80, 75, 65, 100],
+        data: [82, 40, 80, 70, 80, 65, 75, 45, 60, 100],
         backgroundColor: [
           "#F23558",
           "#723FA6",
@@ -64,6 +64,7 @@ const SkillBox = forwardRef((_, skill) => {
           "rgb(154, 162, 235)",
           "rgb(54, 102, 235)",
           "rgb(254, 152, 235)",
+          "rgb(114, 252, 135)",
         ],
       },
     ],
