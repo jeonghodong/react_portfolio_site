@@ -139,8 +139,8 @@ function Section5() {
           <SkillBox>
             <SkillText>React</SkillText>
             <SkillText>Redux Toolkit</SkillText>
-            <SkillText>Scss/Sass</SkillText>
-            <SkillText>Styled Component (Css in Js)</SkillText>
+            <SkillText>Sass(Scss)</SkillText>
+            <SkillText>Styled Components</SkillText>
             <SkillText>Axios</SkillText>
             <SkillText>Firebase</SkillText>
             <SkillText>Vite</SkillText>

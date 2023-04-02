@@ -131,8 +131,8 @@ function Section2() {
           <TitleText>This Portfolio</TitleText>
           <SkillBox>
             <SkillText>React</SkillText>
-            <SkillText>Scss/Sass</SkillText>
-            <SkillText>Styled Component (Css in Js)</SkillText>
+            <SkillText>Sass(Scss)</SkillText>
+            <SkillText>Styled Components</SkillText>
             <SkillText>Chart.js</SkillText>
             <SkillText>Media Query</SkillText>
             <SkillText>CRA</SkillText>
