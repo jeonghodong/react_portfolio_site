@@ -47,7 +47,7 @@ const SkillBox = styled.div`
 `;
 
 const SkillText = styled.span`
-  font-size:.9vw;
+  font-size:.7vw;
   border:.5px solid black;
   border-radius:10px;
   padding:1.5px 10px;
