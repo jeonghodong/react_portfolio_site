@@ -7,6 +7,7 @@ import portImg from "../asset/portfolio.png"
 import photoImg from "../asset/photo_home.png"
 import movieImg from "../asset/무비_home.png"
 import mallImg from "../asset/Mall3.png"
+import marvelImg from "../asset/marvel.png"
 
 const TitleText = styled.h2`
   font-size: 2.5vw;
@@ -76,6 +77,10 @@ const Bg4 = styled(Bg)`
   background-color: #ececec;
   color:black;
 `;
+const Bg5 = styled(Bg)`
+  background-color: red;
+  color:white;
+`;
 const Wrap = styled.div`
   @media ${(props) => props.theme.mobile} {
     flex-direction: column;
@@ -95,23 +100,27 @@ const PortfolioBox = forwardRef(({ onClick }, folio) => {
         <SectionWrap>
           <Section onClick={() => onClick(1, true)}>
             <Bg >React Movie App</Bg>
-            <Img src={movieImg} alt="movie_app" />
+            <Img src={movieImg} alt="movie_app_img" />
           </Section>
           <Section onClick={() => onClick(2, true)}>
             <Bg1>SNS Team Project</Bg1>
-            <Img src={SNSImg} alt="sns_app" />
+            <Img src={SNSImg} alt="sns_app_img" />
           </Section>
           <Section onClick={() => onClick(3, true)}>
             <Bg2>This Portfolio</Bg2>
-            <Img src={portImg} alt="portfolio" />
+            <Img src={portImg} alt="portfolio_img" />
           </Section>
           <Section onClick={() => onClick(4, true)}>
             <Bg3>Photography</Bg3>
-            <Img src={photoImg} alt="photography" />
+            <Img src={photoImg} alt="photography_img" />
           </Section>
           <Section onClick={() => onClick(5, true)}>
             <Bg4>Cat Shopping Mall</Bg4>
-            <Img src={mallImg} alt="shopping_mall" />
+            <Img src={mallImg} alt="shopping_mall_img" />
+          </Section>
+          <Section onClick={() => onClick(6, true)}>
+            <Bg5>Marvel Hero Test</Bg5>
+            <Img src={marvelImg} alt="marvel_hero_test_img" />
           </Section>
         </SectionWrap>
       </Wrap>

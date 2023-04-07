@@ -49,16 +49,18 @@ const SkillBox = forwardRef((_, skill) => {
 
   // BarData
   const BarData = {
-    labels: ["React", "Redux", "Styled Component", "Sass(Scss)", "CSS module", "Media Query", "Postman", "Firebase", "Git"],
+    labels: ["React", "Redux", "Recoil", "Styled Component", "Tailwind CSS", "CSS module", "Sass(Scss)", "Media Query", "Postman", "Firebase", "Git"],
     datasets: [
       {
         type: "bar",
         label: "Skill",
-        data: [82, 40, 80, 70, 80, 65, 75, 45, 60, 100],
+        data: [82, 40, 35, 80, 70, 80, 70, 65, 75, 45, 60, 100],
         backgroundColor: [
           "#F23558",
-          "#723FA6",
+          "#eb9c9d",
+          "#129FA6",
           "#0487D9",
+          "#7db738",
           "#03A65A",
           "#F25835",
           "rgb(154, 162, 235)",
@@ -120,7 +122,6 @@ const SkillBox = forwardRef((_, skill) => {
     <ThemeProvider theme={theme}>
       <Wrap ref={skill}>
         <TitleText>Skills</TitleText>
-
         <div className="chart">
           <div className="chart_box">
             <span className="chart_box_text">CSS</span>
@@ -135,7 +136,7 @@ const SkillBox = forwardRef((_, skill) => {
             <Doughnut type="doughnut" data={doughnutJsData} width="350px" height="350px" options={{ responsive: false, }} className="chart_box_doughnut" />
           </div>
         </div>
-        <Bar type="bar" data={BarData} style={{ margin: "0 auto" }} width="1000px" height="400px" options={{ responsive: false, }} className="chart_bar" />
+        <Bar type="bar" data={BarData} width="1300px" height="400px" options={{ responsive: false, }} className="chart_bar" />
       </Wrap>
     </ThemeProvider>
   );

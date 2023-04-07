@@ -113,6 +113,11 @@ function Intro() {
           navigate("/MallAbout");
         }, 450);
       }
+      if (ref === 6) {
+        setTimeout(() => {
+          navigate("/MarvelAbout");
+        }, 450);
+      }
     }
   };
   // Top으로 이동
