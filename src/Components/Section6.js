@@ -144,16 +144,17 @@ function Section6() {
           <MovieImg src={Marvel1} alt="MarvelImg" />
           <InText>
             안녕하세요. 정호동입니다.<br /><br />
-            고양이를 키우며 고양이 용품을 판매하는 쇼핑몰 1개를 만들어보고 싶었습니다.<br /><br />
-            직접 서버와 데이터베이스를 공부하여 다루어서 배포까지 하고 싶었으나,<br /><br />시간의 문제로 로그인, 회원가입, DB(firestore), 호스팅 기능을 firebase를 사용하여 완성하였습니다.</InText>
+            자신의 평소 성격을 테스트하여 성향에 맞는 특정 히어로가 나오는 성격 테스트입니다.<br /><br />
+          </InText>
           <MovieImg src={Marvel2} alt="MarvelImg" />
           <InText>
-            현 프로젝트를 진행하며 데이터들을 이전보다 더 능숙하게 핸들링 할 수 있게 되었고 기능 개발 부분에서도 실력이 향상되었음을 느꼈습니다.<br /><br />
-            아쉬운 점은 이전 팀 프로젝트와 달리 서버와 DB가 없었기에 REST API 통신을 써보지 못한 점입니다.
+            질문은 총 20개이며 MBTI 기반의 결과를 참고합니다.<br /><br />
+            제가 생각해낸 로직은 5개씩 나누어 숫자가 높은 쪽이 E or I, S or N, F or T, P or J를 결정하여 결과를 만듭니다.
+            <br /><br />
           </InText>
           <MovieImg src={Marvel3} alt="MarvelImg" />
           <InText>
-            해당 프로젝트는 로그인 시 Redux Toolkit으로 세션 스토리지에 유저정보를 저장하며.<br /><br />로컬 스토리지, 세션 스토리지에 대해 이해가 되었습니다.
+            결과에 맞는 MBTI 성향인 마블 캐릭터가 나옵니다.
           </InText>
           <LinkArrow />
           <GoLink href="https://jeonghodong.github.io/marvel_test/" target="_blank" rel="noreferrer" >
